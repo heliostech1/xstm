@@ -1,0 +1,76 @@
+/* http://www.lessthanweb.com/blog/simple-css-tabs-with-jquery */
+
+.spTabs_wrapper {
+    /* width: 422px; */
+}
+
+.spTabs_container {
+    border-bottom: 1px solid #ccc;
+}
+
+.spTabs {
+    list-style: none;
+    padding: 5px 0 4px 0;
+    margin: 0 0 0 10px;
+    font: 0.75em arial;
+}
+
+.spTabs_body {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px 0px;
+    background-color: #f7f7f7; /*  */
+    /* width: 400px; */
+}
+
+
+
+.spTabs li {
+    display: inline;
+}
+
+.spTabs li a {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-bottom: none;
+    outline: none;
+    font-size: 12px;
+    color: #888;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+
+.spTabs li a:hover {
+    /* background-color: #dddddd; */
+    padding: 4px 6px;
+}
+
+.spTabs li.active a {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    padding: 4px 6px 6px 6px;
+    border-bottom: none;
+    color: #000;
+}
+
+.spTabs li.active a:hover {
+    /* background-color: #eeeeee;*/
+    /* padding: 4px 6px 5px 6px; */
+    border-bottom: none;
+}
+ 
+.spTabs li a.icon_accept {
+    background-image: url(accept.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+
+.spTabs li a.icon_accept:hover {
+    padding-left: 24px;
+}
+ 

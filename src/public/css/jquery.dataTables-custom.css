@@ -1,0 +1,142 @@
+
+/* =======================================================================
+
+  My Custom Style
+
+=========================================================================== */
+
+.dataTables_length { 
+   float:none; 
+   white-space: nowrap;
+}
+.dataTables_length select{
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border: 0px;
+    border-radius: 5px;
+}
+.dataTables_info {
+  white-space: nowrap;
+}
+
+.dataTables_wrapper {
+    padding: 0px 10px 0px 10px;
+}
+
+table.display {
+    border: 1px solid black;
+    margin: 3px 0px 5px 0px;
+    border-collapse: initial; /* override bootstrap default setting */
+}
+
+.dataTables_scroll table.display {  /* fix sScrollY wrong display */
+    border: 0px solid black !important;
+    margin: 0px !important;  
+}
+
+table.display thead tr {
+    background-color: #FFFFFF;
+    color: #3C4C59;
+}
+
+table.display thead th {
+    white-space: nowrap;
+    padding: 3px 5px;
+}
+
+
+table.display td {
+    padding: 3px;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    vertical-align: top;
+}
+
+table.display tr.odd {
+    background-color: #FAFAFA;
+}
+
+.paginate_button_disabled {
+    opacity: 0.5;
+    filter: Alpha(Opacity = 35);
+    cursor: default !important;
+}
+
+table.display tr.row_dragged td {
+    background-color: #B0BED9;
+    border-top: 1px solid #8B96AB;
+    border-bottom: 1px solid #8B96AB;
+}
+
+
+table.display tr.row_selected td , table.tableInnerDisplay tr.row_selected td  {
+    background-color: #FFD89E!important;
+    box-shadow: none !important;
+}
+
+table.display tr.odd td.sorting_2, table.display tr.odd td.sorting_3, table.display tr.odd td.sorting_4 {
+    background-color: #EDEDFF;
+}
+
+table.display tr.even td.sorting_2, table.display tr.even td.sorting_3, table.display tr.even td.sorting_4 {
+    background-color: #FAFAFF;
+}
+
+table.display form {
+    margin-bottom:0px;
+    display:inline; 
+}
+
+.dataTables_processing {
+   z-index:1000;
+   box-sizing: initial; /* override bootstrap default setting */
+}
+
+.dataTables_scrollHead { 
+    border-color:black !important;
+    border-width:1px !important;
+    border-style: solid solid none solid !important;
+     box-sizing: initial; /* override bootstrap default setting */     
+}
+
+.dataTables_scrollBody {
+    border-color:black;
+    border-width:1px;
+    border-style: none solid solid solid;
+     box-sizing: initial;   /* override bootstrap default setting */    
+}
+
+.dataTables_scrollHead th, .dataTables_scrollHead table {
+  /*   box-sizing: initial; override bootstrap default setting */    
+}
+
+
+.dataTable_paginationListboxCont {
+   display: inline;
+   border: 1px solid #aaa;
+   background-color: #eee;
+   border-radius: 5px;
+   padding: 3px;
+   margin: 0px 2px;
+}
+
+table.display-loading tr td{
+    /* background-color: #ddd !important; */
+    -moz-opacity: 0.65; 
+    opacity: .65;
+    filter: alpha(opacity=65);
+}
+
+table.dataTable tfoot th {
+   padding: 3px 3px 3px 3px;
+   font-size:8pt;
+   background-color:#eee;
+}
+
+
+table.dataTable tfoot tr.childRow th{
+   border-top: 1px solid #bbb;   
+}
+
+table.dataTable tr.row_group_header td{
+   border-top: 1px solid #A19B9E;
+}

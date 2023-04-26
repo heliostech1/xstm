@@ -1,0 +1,23 @@
+﻿.collapsibleContainer
+{
+}
+
+
+.collapsibleContainerHeader
+{
+    padding:5px 10px 5px 10px;
+    cursor:pointer;
+    float:left;
+}
+
+.collapsibleContainerTitle 
+{
+    font-weight: normal;
+    font-size: 13px;
+    text-decoration: underline; 
+}
+
+.collapsibleContainerContent
+{
+    padding: 0px;
+}

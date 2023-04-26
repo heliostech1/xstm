@@ -1,0 +1,876 @@
+/* =========================================================================================== 
+
+ Navigation bar 
+
+  ============================================================================================ */
+.navBar {
+    font-size: 10pt;
+    padding-bottom: 1px;
+    background-color: #EFEFEF;
+    border-top: solid #555555 1px;
+    border-bottom: solid #555555 1px;
+}
+
+.navBarClear {
+    font-size: 10pt;
+    padding-bottom: 1px;
+}
+
+
+/* =========================================================================================== 
+
+ Text input/display
+
+  ============================================================================================ */
+  
+  /* generic form button */
+
+  .formButton:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: initial;
+  }
+
+.formButton {
+    margin: 0;
+    height: 22px;
+    border: 1px solid #F57D00;
+    border-radius: 4px;
+    color: #F57D00;
+    font-family: 'Noto Sans Thai', sans-serif;
+    
+    /* min-width: 45px; */
+}
+.formButton:hover{
+    background-color: #F57D00;
+    color: #FFFFFF;
+}
+
+/* reset extra padding in Firefox */
+.formButton::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+
+.textInput {
+    background: #FFFFFF;
+    border: 0.5px solid #F57D00;
+    border-radius: 4px;
+    height:19px;
+    padding-left: 2px;
+    font-size:12px !important;
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #F57D00;
+}
+.textInput option {
+    background-color: #ffffff;
+    color: #F57D00;
+}
+.textInput option:hover {
+    background-color: #000;
+    color: #ffffff;
+}
+.textReadOnly {
+    height:19px;
+    padding-left: 2px;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #CCCCCC;
+    color: #555555;
+    background-color: #EFEFEF;
+}
+
+.textReadOnlyFree {
+    padding-left: 2px;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #CCCCCC;
+    color: #555555;
+    background-color: #EFEFEF;
+}
+
+
+select.textInput,
+select.textReadOnly {
+    height:19px;
+    
+}
+
+.textOnClick {
+    border-width: 2px;
+    border-style: inset;
+    border-color: #DDDDDD #EEEEEE #EEEEEE #DDDDDD;
+    padding-left: 2px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* TextArea input/display */
+.textAreaInput {
+    width: 500px;
+    height: 50px;
+    font-family: monospace;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #AAA;
+    padding-left: 2px;
+    background-color: #FFFFFF;
+}
+
+.textAreaReadOnly {
+    width: 500px;
+    height: 50px;
+    font-family: monospace;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #AAA;
+    padding-left: 2px;
+    color: #555555;
+    background-color: #EFEFEF;
+}
+
+.textAreaReadOnly:focus {
+    color: #111111;
+    background-color: #E7E7E7;
+}
+
+/* =========================================================================================== 
+
+  Page
+  
+  ============================================================================================ */
+#pageTitle {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+#pageInstructions {
+   /*  font-size: 10pt; */
+    display: none; /* unused now */
+    height: 2px;
+    
+}
+
+.infoMessage {
+    background-color: #FDFFC2;
+    border: 2px dotted #3039FF;
+    font-size: 12px;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+.infoSuccessMessage {
+    background-color: #FDFFC2;
+    border: 2px dotted #3039FF;
+    font-size: 12px;
+    padding: 5px;
+    width:300px;
+    margin: 0 auto; 
+}
+
+.infoSuccess {
+    background-color: #EBFDD0 !important;
+}
+
+.infoSpecialWarning {
+    background-color: #FFD5CD;
+    border: 1px dotted #3039FF;
+    font-size: 12px;
+    margin: 6px 10px;
+    padding: 4px 10px;
+}
+
+.infoNormalWarning {
+    background-color: #F3F2F2;
+    border: 1px dotted #3039FF;
+    font-size: 12px;
+    margin: 6px 10px;
+    padding: 4px 10px;
+}
+
+.infoSpecialWarning a {
+ /*
+    color: black;
+    text-decoration: none;
+  */
+}
+
+.titleSectionSep {
+    margin-bottom:10px;
+    margin-top:5px;
+    border-top:1px solid #EF5F00;
+ }
+ 
+ 
+#alarmCountCont {
+    position: relative;
+    display: inline;
+    font-size:9px;
+    padding-left:1px;
+    padding-right:3px;
+    margin-left:2px;
+    top:-3px;
+    background-color:red;
+    color:#FFFFFF;
+    border-radius:3px;
+ 
+}
+/* =========================================================================================== 
+
+ General page content
+
+  ============================================================================================ */
+.contentTable {
+    width: 844px;
+    height: 550px;
+    max-height: 550px;
+    margin-top: 10px;
+}
+
+.contentCell { /* height: 100%; */
+    padding: 5px;
+    border: solid #555555 2px;
+    background-color: #FBFBFB;
+    vertical-align: top;
+}
+
+
+/* Map page content */
+.contentMapTable {
+    width: 844px;
+    height: 550px;
+    max-height: 550px;
+    margin-top: 10px;
+}
+
+.contentTrackMapCell {
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #555555;
+    background-color: #FBFBFB;
+    font-size: 7pt;
+    vertical-align: top;
+}
+
+/* Map page content full screen */
+.contentMapTableFull {
+    width: 100%;
+    height: 99%;
+    margin-top: 10px;
+}
+
+.contentTrackMapCellFull {
+    width: 100%;
+    /* height: 100%; */
+    padding: 5px 5px 5px 5px;
+    border: solid #555555 2px;
+    background-color: #FBFBFB;
+    font-size: 7pt;
+    vertical-align: top;
+}
+
+/* simple message response */
+.messageResponseTable {
+    margin-top: 50px;
+}
+
+.messageResponseCell {
+    padding: 10px;
+    border: solid #555555 1px;
+    background-color: #FBFBFB;
+    text-align: center;
+}
+
+
+/* =========================================================================================== 
+
+ Main menu page 
+
+  ============================================================================================ */
+ul.mainmenu li {
+    padding-bottom: 10px;
+}
+
+ul.mainmenu ul li {
+    padding-bottom: 4px !important;
+}
+
+/* =========================================================================================== 
+
+ TABLE, TR, TD
+
+  ============================================================================================ */
+
+span.formLabel {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* height: 25px; */
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    text-align: right;
+    color: #F57D00;
+
+}
+
+TABLE.formTable TD {
+    font-family: 'Noto Sans Thai', sans-serif;
+   font-size: 15px;
+   gap: 5px;
+   padding: 20px 0px;
+}
+
+
+/* =========================================================================================== 
+
+ Section/ Title
+
+  ============================================================================================ */
+  
+.sectionFieldset {
+    border: 1px solid #EF5F00;
+    border-radius: 10px;
+    background: rgba(245, 125, 0, 0.08);
+    padding: 2px 2px 7px 2px;
+}
+
+
+.sectionTitle {
+    font-weight: normal;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left:10px;
+    text-decoration: underline;
+}
+
+.sectionTitleLarge {
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left:10px;
+    text-decoration: underline;
+}
+
+.sectionTitleMiddle {
+    font-weight: normal;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left:10px;
+    text-decoration: underline;
+}
+
+.topInfoTitle {
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.sectionSepHr {
+   color: #bbb;
+   background-color: #bbb;
+   border:0px;
+   height:1px;
+   margin: 10px 5px;
+}
+
+/* =========================================================================================== 
+
+ Footer Button
+
+  ============================================================================================ */
+  
+.footerBtnCont {
+   width: 98%; 
+   margin: 15px 5px 5px 5px;
+   padding-top: 15px;
+
+}
+.footerBtnLeft {
+   float:left; 
+   padding-left:7px;
+}
+
+.footerBtnRight {
+   float:right; 
+   padding-left:7px;  
+}
+
+
+/* =========================================================================================== 
+
+ TOOLBAR BUTTON
+
+  ============================================================================================ */
+.myToolbarBtn {
+    font-size:12px;
+    border-color:#777;
+    color:#333;
+}
+  
+.myToolbarBtn .ui-button-text {
+   padding:1px 11px !important; 
+}
+
+
+/* =========================================================================================== 
+
+ ETC
+
+  ============================================================================================ */
+  
+ .lightOff {
+  float:right;
+  font-size:0px;
+  width:8px;
+  height:8px;
+  margin-top:3px;
+  border:1px solid black;
+ }
+
+ .lightOn {
+  background-color:#7fff00 !important;
+ }
+ 
+ .loadingDiv {
+    background-color: white;
+    border: 1px solid #DDDDDD;
+    color: #999999;
+    font-size: 14px;
+    height: 30px;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 250px;
+ }
+ 
+.loadingInput {
+   /**/
+   background: url('../images/ajax-loader-indicater.gif');
+   background-repeat:no-repeat;
+   background-position:right 2px center;
+   
+}
+
+.linkPlain , .linkPlain:visited, .linkPlain:hover, .linkPlain:active {
+   color: black;
+   text-decoration:none;
+}
+ 
+.cellDragable {
+   cursor: move;
+ }
+ 
+ 
+/* =========================================================================================== 
+
+ GRID
+
+  ============================================================================================ */
+   
+ .tableInnerDisplay {
+    border-collapse: initial !important;  
+    position:relative; 
+    left:-10px;
+    border: 1px solid black;
+    margin:2px 0px !important;   
+ }
+ 
+ .tableInnerDisplay thead th {
+    white-space: nowrap;
+    padding: 3px 5px 3px 5px;
+    border-bottom: 1px solid black;
+    font-weight: normal;
+    cursor: pointer;
+    background-color:#e7e7e7;
+}
+
+ .tableInnerDisplay tbody tr.odd {
+    background-color:white;
+ }
+ 
+ .tableInnerDisplay tbody td {
+    font-size: 8pt;
+    padding: 3px;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+}
+
+.smsIcon {
+    font-family: 'Trebuchet MS',arial,verdana, sans-serif;
+    font-size: 11px;
+    background-color: #5FB91D;
+    border-color: #0C8122;
+    color:white; 
+    padding:0px 2px; 
+    border-radius:5px;
+    line-height:12px;
+}
+
+
+.smsIconDisable {
+    font-family: 'Trebuchet MS',arial,verdana, sans-serif;
+    font-size: 11px;
+    background-color: #C0C0C0; 
+    border-color: #888;
+    color:white; 
+    padding:0px 2px; 
+    border-radius:5px;
+    line-height:12px;
+}
+
+.tickIcon{
+    font-family: Arial Unicode MS, Lucida Grande;
+    font-size: 11px;
+    border-color: #0C8122;
+    color: #0C8122; 
+    line-height:12px;    
+}
+
+.tableCellNoWrap{
+    white-space: nowrap;
+ }
+
+td.cellRight {
+    text-align:right;
+    padding-right:5px !important;
+}
+
+/*
+td.cellRight input{
+    text-align:right;
+}
+*/
+
+td.cellCenter {
+    text-align:center;
+}
+
+td.cellPass {
+    background-color:#00A300;
+}
+
+td.cellFail {
+    background-color:red;
+}
+
+td.cellCounter{
+   /* text-align:right; */
+   background-color: #FAFAFA;
+   color: #333;
+   border-right: 1px solid #9C9C9C !important;
+   box-shadow: inset -3px 0px 6px 4px #F5F5F5;
+
+}
+
+td.cellCheckbox{
+   text-align:center;
+}
+
+tr.row_selected td.cellCheckbox{
+   background-image: url('../images/checkbox_checked.png') !important;
+}
+
+td.cellSelected{
+   background-image: url('../images/checkbox_checked.png') !important;
+}
+
+td.cellCheckbox{
+   background-image: url('../images/checkbox_unchecked.png');
+   background-repeat: no-repeat;
+   background-size: 15px 15px;
+   background-position: center;
+}
+
+th.cellDetailControl{
+   text-align:center;
+   text-decoration:underline;
+}
+
+td.cellDetailControl{
+   text-decoration: underline;
+   cursor: pointer;
+   background: url('../images/details_open.png') no-repeat center center;
+   background-size: 18px 17px;   
+}
+
+td.cellDetailControlHideMode{
+   background-image: url('../images/details_close.png') !important;
+}
+
+td.cellAdditionalDetail {
+   background-color: #f5f5f5;
+   padding: 5px 5px 5px 20px !important;
+}
+
+td.cellDisable{
+   color: gray;
+}
+
+td.cellEditable{
+   background-color: #D8F8E1;
+}
+
+td.groupCellDark{
+    border-top: 1px solid #000; 
+    background-color: #4E4E4E;
+    padding: 3px !important;
+    color: white;
+       
+}
+
+td.groupCell{
+   background-color: #E8E8E8 ;
+   border-top: 1px solid #D6D6D6;   
+   padding:3px !important;
+       
+}
+
+
+/* =========================================================================================== 
+
+ Special Table CSS
+
+  ============================================================================================ */
+  
+.boxTestTableRow_topic {
+    background-color: #E9C8DE !important;
+ }
+ 
+ .boxTestTableRow_send {
+     background-color: #F3F3F3 !important;
+ }
+ 
+ .boxTestTableRow_check {
+     background-color: #FBFDF0 !important; 
+ }
+ 
+ .boxTestTableRow_other {
+     background-color: white !important; 
+ }
+  
+ /* ----------------- */
+ 
+ .boxTestTableRow_active td{
+     border-top: 4px solid orange !important;
+     border-bottom: 5px solid orange !important;
+ }
+ 
+ .boxTestTableRow_active td:first-child {
+     border-left:  4px solid orange !important;
+     border-radius: 5px 0px 0px 5px !important; 
+ }
+  .boxTestTableRow_active td:last-child {
+     border-right:  4px solid orange !important;
+     border-radius: 0px 5px 5px 0px !important;      
+ }
+ 
+  /* ----------------- */
+  
+  
+ .permissionTableRow_menu {
+    background-color: rgb(45, 55, 107) !important;
+    color: white !important;
+ }
+ 
+ /*
+ .permissionTableRow_menu span{
+    color: white !important;
+ }
+ */
+ 
+ .permissionTableRow_main {
+     background-color: rgb(247, 224, 214) !important; 
+ }
+ 
+ .permissionTableRow_other {
+     background-color: white !important; 
+ }
+ 
+ 
+ /* =========================================================================================== 
+
+ company logo
+
+  ============================================================================================ */
+ 
+ .selectionLogoCont {
+    /*  float: left;  */
+     margin: 4px 0 4px 4px;
+     padding: 5px;
+     border: 1px solid #FFF;
+ }
+ .selectionLogoCont.selected{
+     background-color:#E8EFFF;
+     border: 2px solid #8B9EBA;
+ }
+ .selectionLogo {
+     /*background-color:#CCF3A7; */
+     border: 2px solid #DDD;
+     padding: 3px;
+ }
+ 
+ 
+ 
+ /* =========================================================================================== 
+
+ MAP
+
+  ============================================================================================ */
+  
+ 
+ .mapLoadingRight {
+    position:absolute; 
+    right:25px;
+    top:35px; 
+    width:100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    background-color: white;
+    opacity:0.8;
+    z-index:1;
+    display:none;      
+}
+ 
+.mapLoadingCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 30px;
+    margin-left: -125px;
+    margin-top: -40px;
+    padding: 14px 0 2px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    background-color: white;
+    opacity:0.8;
+    z-index:1;  
+    display:none;      
+}
+
+.mapIconResizeY{
+    position: relative;
+    width: 150px;
+    height: 5px !important;
+    bottom: 0px !important;
+    z-index: 1 !important;
+    left: 50%;
+    margin-left: -75px;    
+    background-image: url('../images/resizey.png');
+    background-repeat:repeat;
+    cursor: n-resize;
+   
+}
+
+.mapContainer {
+    width: 100% !important; 
+}
+
+.mapText {
+    font-size:12px !important; 
+    font-family: verdana,sans-serif !important;
+    font-weight:normal !important;
+    line-height:18px !important;
+}
+
+.mapLabel_licensePlate {
+    background-color: white;
+    font-family: verdana,sans-serif !important;
+    font-size: 11px !important;
+    font-weight: normal !important;
+    text-align: center;
+    width: 58px;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+.forceHidden {
+    display: none !important; 
+}
+
+.imageThumbnail {
+    margin:5px;
+    border:1px solid gray;
+    height:100px;
+    width:120px;
+}
+
+.imageThumbnail_img {
+    height:100px;
+    width:120px; 
+    cursor: pointer;
+}
+
+.imageDescription {
+   text-align:center;
+   word-wrap:break-word;
+   width:120px;
+}
+
+.imageTextInput {
+   text-align:center;
+   width:120px;
+   
+    height:15px;
+    padding-left: 2px;
+    border-width: 1px;
+    border-style: inset;
+    background-color: #FFFFFF;
+    border-color: #AAA;   
+}
+
+ 
+.autoUpdatePanel {
+   white-space:nowrap;
+}
+
+.noWrapPanel {
+  white-space:nowrap;
+}
+
+.plainReportTable th{
+  border-bottom:1px solid black
+}
+
+.ncReportImgContainer {
+  border: 1px solid #a2a2a2;
+  background-color:#F5F5F5;
+}
+
+
+.reportTableContainer {
+  padding: 5px 15px;
+}
+
+.reportTableContainer table{
+  width:100%;
+}
+
+.reportTableContainer table thead th {
+  border-bottom: 1px solid black;
+}
+
+
+.chartCont{
+  width: 80%;
+  height: 250px;
+  margin: 20px 20px 40px 40px;
+}

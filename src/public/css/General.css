@@ -1,0 +1,128 @@
+
+
+HTML,BODY { 
+    height: 100%;
+    background-color: #E6E6E6; 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px; 
+    font-size: 18px; 
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+HTML {
+    overflow-y: scroll;
+}
+
+
+A:hover { 
+    color: #00CC00;
+}
+label{
+    font-weight: normal;
+}
+
+SPAN.spanLink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+SPAN.spanLink:hover { 
+    color: #00CC00;
+}
+
+H1 { 
+    font-size: 25px; 
+    white-space: pre;
+}
+
+H2 { 
+    font-size: 25px; 
+    white-space: pre; 
+}
+
+H3 { 
+    font-size: 15px; 
+    white-space: pre; 
+    border-bottom: 1px solid #E0E0E0;
+    font-weight: normal;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+H4 { 
+    font-size: 18px; 
+    white-space: pre; 
+}
+
+FORM {
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+}
+
+HR {
+    margin-top: 2px; 
+    margin-bottom: 2px;
+}
+HR.noMargin {
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+}
+
+table {
+  border: 0;
+  border-spacing: 0;
+  margin: 0;
+}
+
+TH {
+    text-align: left;   
+}
+TD { 
+    font-size: 12px; 
+}
+
+INPUT { 
+    font-size: 12px; 
+    margin: 0px;
+}
+
+INPUT:focus { 
+    /* background-color: #FFFFC9;  */
+}
+
+SELECT { 
+    font-size: 12px; 
+    margin: 0px;    
+}
+
+html>body SELECT{ /* only for ie */
+    padding-left : 0px !important;
+}
+
+SELECT:focus { 
+    /* background-color: #FFFFC9;  */
+}
+
+TEXTAREA { 
+    font-size: 12px; 
+    margin: 0px;    
+}
+
+TEXTAREA:focus {
+    /* background-color: #FFFFC9;  */
+}
+
+
+/* http://stackoverflow.com/questions/19954893/google-map-infowindow-displays-scroll-bars-in-google-chrome */
+
+.GmapV3_scrollFix {
+    line-height: 1.35;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+

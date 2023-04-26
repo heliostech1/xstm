@@ -1,0 +1,226 @@
+@extends('layouts.app')
+
+@section('header')
+
+<script type='text/javascript'>
+$(document).ready(function() {
+
+	/* Init the table */
+    var oTable = DTHelper.createPagingDatatable('resultListTable', '<?php echo $sitePageId ?>',
+            {
+                "aaSorting": [[2,'asc']],
+                <?php if (!empty($tableDisplayStart)) echo "'iDisplayStart': $tableDisplayStart," ?>
+                <?php if (!empty($tableDisplayLength)) echo "'iDisplayLength': $tableDisplayLength," ?>     
+                <?php if (!empty($tableSelectedId))
+                     echo "'fnRowCallback': DTHelper.getSelectRowCallback('$tableSelectedId','mongoId')," 
+                 ?>
+                "sAjaxSource": "./getDataTable",
+
+                "aoColumns": [
+                              { "mData": "counterColumn", "sClass": "cellCounter", "bSortable": false },  
+                              { "mData": "mongoId", "sClass": "forceHidden"},  
+                              { "mData": "driverId" },                               
+                              { "mData": "title" },
+                              { "mData": "name" },
+                              { "mData": "surname" },
+                              { "mData": "active" },
+                              
+                              { "mData": "latestVehicleId" },
+                              { "mData": "latestVehicleTailId" },
+                              { "mData": "latestCustomerCompanyId" },    
+                ],
+                                          
+                "fnServerData": function ( sSource, aoData, fnCallback ) {
+
+                    <?php foreach ($fieldNames as $name): ?>
+                    aoData.push( { "name": "<?php echo $name?>", "value": $('#<?php echo $name?>').val() } );
+                    <?php endforeach; ?>
+                    
+                    $.ajax( {
+                        "dataType": 'json', 
+                        "type": "POST", 
+                        "url": sSource, 
+                        "data": aoData, 
+                        "success": function (json) { 
+                            DTHelper.handleSuccess('datatableMessage',json);
+                            fnCallback(json);
+                        },
+                        "error": function (xhr, error, thrown) {
+                            DTHelper.handleError('datatableMessage', xhr, error);
+                        }
+                    } );
+                }
+
+            }
+     );
+
+    DTHelper.applySelectable(oTable, "resultListTable");
+
+    //$("#< ?=$fieldNames['cri_date']?>").datepicker();
+    //$("#< ?=$fieldNames['cri_to_date']?>").datepicker();
+        
+    $('#addBtn').click( function() {
+        var data = DTHelper.getSelected(oTable);
+        id = (data)? data['mongoId']: "";
+        submitPageData("./add", oTable, id);        
+    } );
+
+    $('#editBtn').click( function() {
+        if (DTHelper.checkSingleSelected(oTable)) {
+            var data = DTHelper.getSelected(oTable);
+            submitPageData("./edit", oTable, data['mongoId']);
+        }
+    } );
+
+    $('#viewBtn').click( function() {
+        if (DTHelper.checkSingleSelected(oTable)) {
+            var data = DTHelper.getSelected(oTable);
+            submitPageData("./view", oTable, data['mongoId']);
+        }
+    } );
+
+    $('#deleteBtn').click( function() {
+        var data = DTHelper.getSelected(oTable);
+        if (AppUtil.checkEmpty(data)) {
+             if (confirm("คูณต้องการลบข้อมูล '"+data['name']+"' ?")) {
+                 submitPageData("./delete", oTable, data['mongoId']);
+             }
+        }
+    } );
+
+    $('#downloadQrCodeBtn').click( function() {
+        if (DTHelper.checkSingleSelected(oTable)) {
+            var data = DTHelper.getSelected(oTable);
+            var label1 = data['driverId'];
+            var label2 = data['title'] + data['name']+ " " + data['surname'];
+            window.open('../qrCode/genImage?label1=' + label1 + '&label2=' + label2, '_self');  
+        }
+    } );
+    
+    
+    $('#searchBtn').click( function() {
+        oTable.fnPageChange('first');
+    } );
+
+    $('#clearCriteriaBtn').click(function() { 
+        FormHelper.clearValue('searchForm');
+    }); 
+	
+
+} );
+
+
+function submitPageData(target, oTable, rowId, newWindow) {
+    var form = document.hiddenCriteriaForm;
+    var targetBlank = (newWindow === true)?  "_blank": "_self";
+    form.setAttribute("target", targetBlank);     
+
+    <?php foreach ($fieldNames as $name): ?>
+        form.<?php echo $name?>.value = $('#<?php echo $name?>').val();  
+    <?php endforeach; ?>
+               
+    form.<?php echo $fieldPrefix?>_tableDisplayStart.value = oTable.fnSettings()._iDisplayStart;
+    form.<?php echo $fieldPrefix?>_tableDisplayLength.value = oTable.fnSettings()._iDisplayLength;
+    form.<?php echo $fieldPrefix?>_tableSelectedId.value = rowId;
+    form.action = target;
+    form.submit();
+}
+
+</script>
+
+
+@endsection
+
+@section('content')
+
+<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageInstructions"><?php echo $sitePageDesc?></div>
+<hr class="titleSectionSep">
+
+ <?php if (!empty($message)) echo "<div id='' class='infoMessage'>$message</div>"?>
+<div id='datatableMessage' class='infoMessage' style="display: none"></div>
+
+<form name='hiddenCriteriaForm' method='post' style='display:none;'> 
+ {{ csrf_field() }}
+<?php foreach ($fieldNames as $name): ?>
+    <input type='hidden' name='<?php echo $name?>' />
+<?php endforeach; ?>
+    
+<input type='hidden' name='<?php echo $fieldPrefix?>_tableDisplayStart' />
+<input type='hidden' name='<?php echo $fieldPrefix?>_tableDisplayLength' />
+<input type='hidden' name='<?php echo $fieldPrefix?>_tableSelectedId' />
+</form>
+
+
+<fieldset class='sectionFieldset' style='margin: 0 10px'>
+    <legend >ค้นหา</legend>
+
+    <table cellspacing="0" border="0" cellpadding="0" class="formTable" id="searchForm">
+        <tr>
+            <td>
+                <span class="formLabel">รหัส:</span>
+                <input class="textInput" type="text" style="width:120px" id="<?php echo $fieldNames['driverId']?>" value='<?php echo $fieldDatas['driverId']?>'>                
+                 &nbsp;   
+                <span class="formLabel">ชื่อ:</span>
+                <input class="textInput" type="text" style="width:250px" id="<?php echo $fieldNames['name']?>" value='<?php echo $fieldDatas['name']?>'>                
+                 &nbsp;                          
+                 <!--    
+                <span class="formLabel">วันที่สร้าง:</span>
+                <input class="textInput" type="text" style="width:80px" id="< ?php echo $fieldNames['cri_date']?>" value='< ?php echo $fieldDatas['cri_date']?>'>
+                -
+                <input class="textInput" type="text" style="width:80px"  id="< ?php echo $fieldNames['cri_to_date']?>" value='< ?php echo $fieldDatas['cri_to_date']?>'>
+                &nbsp;
+                 -->
+                <span class="formLabel">สถานะ:</span>
+                {!! SiteHelper::dropdown($fieldNames['active'], $activeOpt, $fieldDatas['active'], " id='".$fieldNames['active']."' class='textInput' style='width:150px' ") !!}
+                
+                &nbsp;&nbsp;<input type="button" class='formButton' value="ค้นหา" id="searchBtn" />
+                &nbsp;<input type="button" class='formButton' value="ล้าง" id="clearCriteriaBtn" />  
+                
+            </td>
+        </tr>                
+    </table>
+
+</fieldset>
+<div style='height: 10px; font-size: 0px'></div>
+
+
+                              
+<table id='resultListTable' cellspacing='0' cellpadding='0' class='display'>
+    <thead>
+        <tr>
+            <th rowspan="2" width='15'>&nbsp;</th>        
+            <th rowspan="2" width='1'>รหัส(ซ่อน)</th>  
+            <th rowspan="2" width='100'>รหัส</th>   
+            <th rowspan="2" width='100'>คำนำหน้า</th>
+            <th rowspan="2" width='100'>ชื่อ</th>
+            <th rowspan="2" width='100'>นามสกุล</th>            
+            <th rowspan="2" width='100' style='border-right:1px solid black'>สถานะ</th>
+            <th colspan="3" style='text-align:center'>ข้อมูลล่าสุด</th>            
+        </tr>   
+        <tr>
+            <th width='80'>หัวรถ</th>        
+            <th width='80'>หางรถ</th>  
+            <th width='100'>บริษัทลูกค้า</th>   
+          
+        </tr>          
+    </thead>
+    <tbody>
+    </tbody>    
+</table>
+<br>
+
+<div class='footerBtnCont'>
+   {!! SiteHelper::footerBtn('driver/add', ' value="เพิ่ม" id="addBtn"  ') !!}
+   {!! SiteHelper::footerBtn('driver/edit', ' value="แก้ไข" id="editBtn" '); !!}
+   {!! SiteHelper::footerBtn('driver/view', ' value="เรียกดู" id="viewBtn"  '); !!}
+   {!! SiteHelper::footerBtn('driver/view', ' value="ดาวน์โหลด QR Code" id="downloadQrCodeBtn"  '); !!}      
+   {!! SiteHelper::footerBtnRight('driver/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   <div style='clear: both'></div>
+</div>
+
+
+@endsection
+
+
+
