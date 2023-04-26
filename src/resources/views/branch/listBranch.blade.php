@@ -135,10 +135,10 @@ function submitPageData(target, oTable, rowId, newWindow) {
 <input type='hidden' name='<?php echo $fieldPrefix?>_tableSelectedId' />
 </form>
 
+  <h4 >ค้นหา</h4>
 
-<fieldset class='sectionFieldset' style='margin: 0 10px'>
-    <legend >ค้นหา</legend>
-
+<fieldset class='sectionFieldset' >
+  
     <table cellspacing="0" border="0" cellpadding="0" class="formTable" id="searchForm">
         <tr>
             <td>
