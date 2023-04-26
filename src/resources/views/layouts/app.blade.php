@@ -100,12 +100,12 @@
 #siteWrapper {
     min-height: 100%;
     height: auto !important; /* */
-    background-image: url({{ Url::asset('images/background-login.png') }});
-    background-color: #7e3910;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    opacity: 0.8;
+
+    /*  background-color: #f9f8f8; */
+     /* border:2px solid yellow;    */
+
+    background-image: url( {{ Url::asset('images/texture/furley_bg.png')}} );
+}
 
     
 .siteBody {
