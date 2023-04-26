@@ -116,7 +116,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
 
 @section('content')
 
-<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
+<div id="pageTitle"><?php echo $sitePageName?></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -134,9 +134,9 @@ function submitPageData(target, oTable, rowId, newWindow) {
 <input type='hidden' name='<?php echo $fieldPrefix?>_tableSelectedId' />
 </form>
 
-<h4 >ค้นหา</h4>
-<fieldset class='sectionFieldset'>
-    
+
+<fieldset class='sectionFieldset' style='margin: 0 10px'>
+    <legend >ค้นหา</legend>
 
     <table cellspacing="0" border="0" cellpadding="0" class="formTable" id="searchForm">
         <tr>
@@ -182,7 +182,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
    {!! SiteHelper::footerBtn("$fieldPrefix/add", ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn("$fieldPrefix/edit", ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn("$fieldPrefix/view", ' value="เรียกดู" id="viewBtn"  '); !!}
-   {!! SiteHelper::footerBtn("$fieldPrefix/delete", ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtnRight("$fieldPrefix/delete", ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

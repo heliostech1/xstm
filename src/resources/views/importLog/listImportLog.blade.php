@@ -117,9 +117,9 @@ function submitPageData(target, oTable, rowId, newWindow) {
 <input type='hidden' name='<?php echo $fieldPrefix?>_tableSelectedId' />
 </form>
 
-<h4 ><a href='javascript:void(0)' id='filterTitleLink' class='filterTitleLink' >ค้นหา &#9660</a></h4>
-<fieldset class='sectionFieldset'>
-    
+
+<fieldset class='sectionFieldset' style='margin: 0 10px'>
+    <legend ><a href='javascript:void(0)' id='filterTitleLink' class='filterTitleLink' >ค้นหา &#9660</a></legend>
 
     <table cellspacing="0" border="0" cellpadding="0" class="formTable" id="searchForm">
         <tr>

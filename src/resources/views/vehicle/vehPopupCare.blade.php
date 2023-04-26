@@ -107,9 +107,9 @@
 
 
 <div id="popupCare" style='padding:2px 0px; display:none;' title="เพิ่มข้อมูล"> <!--  -->
-<h4 >ค้นหา</h4>
-<fieldset class='sectionFieldset'>
-    
+
+<fieldset class='sectionFieldset' style='margin: 0 10px'>
+    <legend >ค้นหา</legend>
 
     <table cellspacing="0" border="0" cellpadding="0" class="formTable" id='criteriaForm'>     
         <tr>

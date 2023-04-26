@@ -318,7 +318,7 @@ TABLE.formTable TD {
     font-family: 'Noto Sans Thai', sans-serif;
    font-size: 15px;
    gap: 5px;
-   padding: 10px 0px;
+   padding: 20px 0px;
 }
 
 
@@ -357,11 +357,13 @@ TABLE.formTable TD {
 }
 
 .sectionTitleMiddle {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 13px;
     text-align: left;
     margin-top: 10px;
     margin-bottom: 8px;
+    margin-left:10px;
+    text-decoration: underline;
 }
 
 .topInfoTitle {

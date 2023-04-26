@@ -138,7 +138,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
 
 @section('content')
 
-<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
+<div id="pageTitle"><?php echo $sitePageName?></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -156,9 +156,9 @@ function submitPageData(target, oTable, rowId, newWindow) {
 <input type='hidden' name='<?php echo $fieldPrefix?>_tableSelectedId' />
 </form>
 
-<h4>ค้นหา</h4>
-<fieldset class='sectionFieldset'>
-    
+
+<fieldset class='sectionFieldset' style='margin: 0 10px'>
+    <legend >ค้นหา</legend>
 
         
         
@@ -292,7 +292,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
    {!! SiteHelper::footerBtn('vehicle/add', ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn('vehicle/edit', ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn('vehicle/view', ' value="เรียกดู" id="viewBtn"  '); !!}      
-   {!! SiteHelper::footerBtn('vehicle/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtnRight('vehicle/delete', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 
