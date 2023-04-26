@@ -106,7 +106,7 @@ function updateAckByResult(mongoId, json) {
 
 @section('content')
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
