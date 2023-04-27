@@ -24,6 +24,7 @@ TD.accountLoginFieldLabel {
     text-align: center;
 }
 
+
 .form-group input:not(#buttonSubmit) {
     background: transparent;
     border: none;
@@ -89,6 +90,7 @@ TD.accountLoginFieldLabel {
 .siteFooter{
   padding:0px;
 }
+
 </style>
 
 

@@ -166,7 +166,6 @@
 
 .siteTopHeader {
   background-color: #3C4C59;  
-    
   position: fixed;
   top: 0;
   width: 100%;
@@ -260,7 +259,7 @@
     height: 100%;
     width: 225px;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     top: 0;
     left: 0;
     /* overflow-x: hidden; */
