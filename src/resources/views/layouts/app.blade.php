@@ -100,20 +100,11 @@
 #siteWrapper {
     min-height: 100%;
     height: auto !important; /* */
-<<<<<<< HEAD
     background-image: url({{ Url::asset('images/background-login.png') }});
     background-color: #7e3910;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    opacity: 0.8;
-=======
-
-    /*  background-color: #f9f8f8; */
-     /* border:2px solid yellow;    */
-
-    background-image: url( {{ Url::asset('images/texture/furley_bg.png')}} );
->>>>>>> parent of f8daf00 (Merge pull request #4 from heliostech1/gas)
 }
 
     
@@ -178,7 +169,6 @@
 
 .siteTopHeader {
   background-color: #3C4C59;  
-    
   position: fixed;
   top: 0;
   width: 100%;
@@ -272,7 +262,7 @@
     height: 100%;
     width: 225px;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     top: 0;
     left: 0;
     /* overflow-x: hidden; */

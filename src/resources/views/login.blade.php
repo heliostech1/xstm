@@ -24,68 +24,10 @@ TD.accountLoginFieldLabel {
     text-align: center;
 }
 
-.form-group input:not(#buttonSubmit) {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #FFA500;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: #495057;
-}
-.form-group input:focus :not(#buttonSubmit){
-  outline: none;
-  box-shadow: none;
-  border-color: #F57D00;
-}
-.btn-orange {
-  background-color: #FFA500;
-  background: linear-gradient(88.95deg, #EF5F00 1.35%, #F57D00 63.97%, #F1B679 98.62%);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-
+.infoLoginContent div{
+    padding:5px;
 }
 
-.btn-orange:hover {
-  background-color: #FF8C00;
-}
-.card-img-top {
-  max-width: 100%;
-  width: 100px; /* เพิ่มความกว้างของโลโก้ให้เป็น 100px */
-  max-height: 100px; /* เพิ่มความสูงของโลโก้ให้เป็น 100px */
-  display: block; /* ตั้งค่าให้โลโก้เป็น block element */
-  margin: 0 auto;
-}
-
-
-.container 
-{
-  box-sizing: border-box;
-  padding: 20px;
-  border: 2px solid orange;
-  border-radius: 10px;
-  background: rgba(245, 125, 0, 0.08);
-      
-}
-.login-container {
-  box-sizing: border-box;
-  border: 2px solid orange;
-  border-radius: 10px;
-  background: rgba(245, 125, 0, 0.08);
-  position: absolute; /* กำหนดให้ container login อยู่ในตำแหน่งแบบ absolute */
-  top: 50%; /* กำหนดให้ container login อยู่ตรงกลางจอในแนวดิ่ง */
-  left: 50%; /* กำหนดให้ container login อยู่ตรงกลางจอในแนวนอน */
-  transform: translate(+70%, -50%); /* กำหนดให้ container login ย้ายตำแหน่งไปอยู่ที่กลางจอ */
-  max-width: 500px; /* กำหนดขนาดสูงสุดของ container login */
-  width: 315px; /* กำหนดขนาดความกว้างของ container login เป็น 100% */
-  height: 350px;
-  padding: 20px; /* กำหนดระยะห่างของขอบภายใน container login */
-}
 
 </style>
 
@@ -110,6 +52,7 @@ $(document).ready(function() {
 
 @section('content')
 
+<<<<<<< HEAD
   <div class="login-container" >
     <div class="form-group text-center">
               <form method="POST" action="{{ url('/login') }}">
@@ -122,6 +65,55 @@ $(document).ready(function() {
               </form>
       </div>
   </div>
+=======
+    <div class="accountLoginTitle">กรุณาระบุข้อมูลผู้ใช้และรหัสผ่าน </div>    
+    <div style='text-align: center; padding: 10px 0px 20px 0px;'>
+    
+    <form method="POST" action="{{ url('/login') }}">
+        {{ csrf_field() }}
+        
+        <table cellspacing="0" cellpadding="0" border="0" style='margin: 0 auto; text-align:left'>
+            <tbody>    
+                <!--    -->
+                <tr>
+                    <td class="accountLoginFieldLabel">บัญชี:</td>
+                    <td class="accountLoginFieldValue">
+                    <input id="accountIdInput" type="text" class="textInput" style='width:220px' name="accountId" value="{{ old('accountId') }}">
+                    </td>
+                </tr>  
+               
+                <tr>
+                    <td class="accountLoginFieldLabel">ผู้ใช้:</td>
+                    <td class="accountLoginFieldValue">
+                    <input id="userIdInput" type="text" class="textInput" style='width:220px' name="userId" value="{{ old('userId') }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="accountLoginFieldLabel">รหัสผ่าน:</td>
+                    <td class="accountLoginFieldValue">
+                      <input id="passwordInput" type="password" class="textInput" style='width:220px' name="password">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br>  <span style="font-size: 8pt; padding-left: 10px;"> 
+        <input type="submit" value="เข้าสู่ระบบ" class='formButton' name="submit" style="width:80px">&nbsp;
+        <input type="button" value="ล้าง"  class='formButton'  id='clearBtn' style="width:60px">
+        </span>
+    </form> 
+    </div>
+
+    <div class="infoLoginContent" id="infoMessage">
+    <?php if (isset($message)) echo $message;?>
+    
+    @if($errors->any())
+       @foreach ($errors->all() as $error)
+          <div>{{ $error }}</div>
+       @endforeach
+    @endif            
+    </div>
+>>>>>>> parent of b792ca7 (Merge pull request #3 from heliostech1/gas)
 
 
 @endsection
