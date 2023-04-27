@@ -137,9 +137,8 @@
 
     
 .sitePageContainer{
-    min-height: 400px; 
+    min-height: 100%; 
     padding: 0px;
-    padding-bottom: 15px;    
     border-style: solid;
     
     /* border-color: #333; */
@@ -195,11 +194,11 @@
 
 .siteFooter {
     clear: both;
-    width:93%;
+    width:93.25%;
     height: 120px;
-
-    position: absolute;
+    margin-bottom: -50px;
     bottom: 0;
+    position: absolute;
     border-top: 1px solid #3C4C59;
     /* color: #eee; */
     background-color:#FFFFFF;    
@@ -207,6 +206,8 @@
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
+
+
 }
 
 .siteFooterlogin {
