@@ -40,7 +40,6 @@ TD.accountLoginFieldLabel {
   border-color: #F57D00;
 }
 .btn-orange {
-  background-color: #FFA500;
   background: linear-gradient(88.95deg, #EF5F00 1.35%, #F57D00 63.97%, #F1B679 98.62%);
   color: #FFFFFF;
   border: none;
@@ -52,7 +51,10 @@ TD.accountLoginFieldLabel {
 }
 
 .btn-orange:hover {
-  background-color: #FF8C00;
+  transition: all .4s ease;
+  transition-delay: 0s;
+  background: #D94E00;
+  color:#FFFFFF;
 }
 .card-img-top {
   max-width: 100%;
@@ -61,20 +63,9 @@ TD.accountLoginFieldLabel {
   display: block; /* ตั้งค่าให้โลโก้เป็น block element */
   margin: 0 auto;
 }
-
-
-.container 
-{
-  box-sizing: border-box;
-  padding: 20px;
-  border: 2px solid orange;
-  border-radius: 10px;
-  background: rgba(245, 125, 0, 0.08);
-      
-}
 .login-container {
   box-sizing: border-box;
-  border: 2px solid orange;
+  border: 1px solid orange;
   border-radius: 10px;
   background: rgba(245, 125, 0, 0.08);
   position: absolute; /* กำหนดให้ container login อยู่ในตำแหน่งแบบ absolute */
@@ -86,7 +77,18 @@ TD.accountLoginFieldLabel {
   height: 350px;
   padding: 20px; /* กำหนดระยะห่างของขอบภายใน container login */
 }
-
+.login-container input::placeholder {
+  color: #FFFFFF;
+}
+.footerbox{
+  background: rgba(245, 125, 0, 0.5);
+  padding: 0px;
+  border: 1.5px solid rgba(245, 125, 0, 1);
+  color: #FFFFFF;
+}
+.siteFooter{
+  padding:0px;
+}
 </style>
 
 
