@@ -217,9 +217,7 @@
 
     position: absolute;
     bottom: 0;
-    border-top: 1px solid #3C4C59;
     /* color: #eee; */
-    background-color:#FFFFFF;    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
