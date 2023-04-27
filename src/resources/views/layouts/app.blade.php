@@ -100,11 +100,10 @@
 #siteWrapper {
     min-height: 100%;
     height: auto !important; /* */
-    background-image: url({{ Url::asset('images/background-login.png') }});
-    background-color: #7e3910;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
+
+    /*  background-color: #f9f8f8; */
+     /* border:2px solid yellow;    */
+
 }
 
     
@@ -118,8 +117,11 @@
 }
 
 .loginBody {
-   padding:75px 25px 28px 25px !important;  
-   background-color:transparent !important;   
+   min-height: 100vh;
+   height: auto;
+   background-image: url( {{ Url::asset('images/bglogin.png')}} );
+   background-repeat: no-repeat;
+   background-size: 100% 100%; 
 }
     
 .siteTitleText {
@@ -154,16 +156,11 @@
 }
 
 .loginPageContainer{
-    min-height: 400px;
-    padding: 0px 100px 20px 100px; 
+    min-height: 100vh;
     /* border: 1px solid #333; */
-    border-radius:20px;
-    /* background-color: #FBFBFB; */
     vertical-align: top;
     text-align: center;
-    /* box-shadow: 0px 4px 20px 5px #C2C2C2; */
-    padding-bottom: 15px;
-    /* background-image: url( {{ SiteHelper::url('images/texture/furley_bg.png')}} ); */
+    background: linear-gradient(180deg, rgba(245, 125, 0, 0.23) 0%, rgba(217, 217, 217, 0) 100%);
 }
 
 
@@ -318,9 +315,11 @@ $(document).ready(function () {
 <?php endif;?>
     
     
-<div id='siteWrapper'>
+<div id='siteWrapper'>    
 
-    <div class="siteTopHeader">
+    <?php if ($pageName != 'login'): ?>
+    
+        <div class="siteTopHeader">
          <div class="siteLogoContLeft" >
                <div style='padding:0px 0px 0px 20px' >
                    <img src='{{ Url::asset('images/logo/company_top.png')}}'  style="width:100px" />
@@ -338,10 +337,6 @@ $(document).ready(function () {
             
     
     </div>
-
-    
-
-    <?php if ($pageName != 'login'): ?>
     <div class="siteBody" >
         <div class='sitePageContainer'>
              @yield('content')                   
