@@ -104,7 +104,6 @@
     /*  background-color: #f9f8f8; */
      /* border:2px solid yellow;    */
 
-    background-image: url( {{ Url::asset('images/texture/furley_bg.png')}} );
 }
 
     
