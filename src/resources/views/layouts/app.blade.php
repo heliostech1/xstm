@@ -219,11 +219,13 @@
     bottom: 0;
     border-top: 1px solid #3C4C59;
     /* color: #eee; */
-    background-color:#FFFFFF;    
+       
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
+    background: rgba(245, 125, 0, 0.5);
+    border: 1.5px solid #F57D00;
 }
 
 .siteBottomHeader {

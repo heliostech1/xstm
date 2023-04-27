@@ -90,7 +90,8 @@
     </div>
     <div class="lastfoot">
         <div class="footlogo">
-            <img src='{{ Url::asset('images/logo1.svg')}}'  style="width:50px; height:20px;" />
+        <img src='{{ Url::asset('images/Logo2.svg')}}' style="max-width: 100%; height: auto; filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));" />
+
         </div>
         <div class="lastfootinfo">
             <p style = "font-weight:500">Xsense Information Service Co., Ltd</p>
