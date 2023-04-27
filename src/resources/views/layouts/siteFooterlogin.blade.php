@@ -1,29 +1,36 @@
 
-@section('siteFooterInfoHtml')
+@section('siteFooterloginHtml')
 <style>
     .footerbox{
         width:100%;
         height: 100%;
-        padding-left:150px;
+        padding-left:230px;
         padding-right: 50px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        
+    }
+    .firstfoot{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
     }
     .firstfoot h4{
         font-weight: 500;
-        font-size:12px; 
+        font-size:12px;
+        float: left;
     }
     .firstfoot p{
         font-weight: 300;
-        font-size:12px; 
+        font-size:12px;
+        float: left;
     }
     .midfoot{
         display:flex;
         flex-direction: row;
         padding-top: 40px;
+        text-align: left;
     }
     .midfoot p{
         margin: 0px;

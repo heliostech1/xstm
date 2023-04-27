@@ -3,6 +3,7 @@
     
 @include('layouts.siteBranchPopup')
 @include('layouts.siteFooterInfo')
+@include('layouts.siteFooterlogin')
 
 <head>
     <meta charset="utf-8">
@@ -100,7 +101,7 @@
 #siteWrapper {
     min-height: 100%;
     height: auto !important; /* */
-
+    
     /*  background-color: #f9f8f8; */
      /* border:2px solid yellow;    */
 
@@ -111,7 +112,7 @@
    padding:100px 100px 0px 99px !important;  
    background-color:#FFFFFF !important;   
    height: 100vh;
-    
+   
   /* border:2px solid blue; */
    
 }
@@ -194,10 +195,11 @@
 
 .siteFooter {
     clear: both;
-    width:100%;
+    width:93%;
     height: 120px;
-    padding: 4px 10px 1px 10px;
-    position: relative;
+
+    position: absolute;
+    bottom: 0;
     border-top: 1px solid #3C4C59;
     /* color: #eee; */
     background-color:#FFFFFF;    
@@ -207,16 +209,21 @@
     z-index: 1;
 }
 
-.siteFooterItemLogo {
-   float:left;
-   width:30px;
-}
+.siteFooterlogin {
+    clear: both;
+    width:100%;
+    height: 120px;
 
-.siteFooterItemText {
-   float:left;
-   width:200px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #3C4C59;
+    /* color: #eee; */
+    background-color:#FFFFFF;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
 }
-
 
 .siteBottomHeader {
     /* height: 2px;
@@ -341,21 +348,25 @@ $(document).ready(function () {
         <div class='sitePageContainer'>
              @yield('content')                   
         </div>
+        <footer class='siteFooter' >       
+            @yield('siteFooterInfoHtml')
+        </footer>
     </div>
     <?php else:?>    
     <div class="loginBody" >
        <div class='loginPageContainer'>
-           @yield('content')                   
-       </div>  
+           @yield('content') 
+        <footer class='siteFooterlogin' >       
+            @yield('siteFooterloginHtml')
+        </footer>        
+       </div> 
     </div>
     <?php endif;?>
 
 
 </div> <!--  end of siteWrapper -->  
 
-<footer class='siteFooter' >       
-    @yield('siteFooterInfoHtml')
-</footer>
+
 
 @yield('siteBranchPopupHtml')
 <div id='plUploadContainer' style='display:none'></div>
