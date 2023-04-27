@@ -217,7 +217,6 @@
 
     position: absolute;
     bottom: 0;
-    border-top: 1px solid #3C4C59;
     /* color: #eee; */
        
     display: flex;
