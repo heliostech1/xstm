@@ -40,7 +40,7 @@ $(document).ready(function() {
 @section('content')
 
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -64,13 +64,13 @@ $(document).ready(function() {
 
          
         <tr>
-            <td class="formLabel" style='width:150px'>ชื่อ:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $name }}' name="name"></td>
+            <td class="formLabel" style='padding-right:25px'>ชื่อ:</td>
+            <td><input class="textInput" type="text" value='{{ $name }}' name="name"></td>
         </tr>  
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
         <tr>
             <td class="formLabel">สถานะ:</td>
-            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' style='width:400px' ") !!}
+            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' ") !!}
             </td>
         </tr>
             
