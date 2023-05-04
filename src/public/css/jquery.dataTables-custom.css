@@ -55,11 +55,6 @@ table.display tr.odd {
     background-color: #FAFAFA;
 }
 
-.paginate_button_disabled {
-    opacity: 0.5;
-    filter: Alpha(Opacity = 35);
-    cursor: default !important;
-}
 
 table.display tr.row_dragged td {
     background-color: #B0BED9;
@@ -112,11 +107,17 @@ table.display form {
 
 .dataTable_paginationListboxCont {
    display: inline;
-   border: 1px solid #aaa;
-   background-color: #eee;
-   border-radius: 5px;
-   padding: 3px;
-   margin: 0px 2px;
+   border: 1px solid rgba(60, 76, 89, 1);
+   background-color: #fff;
+   border-radius: 4px;
+   width: 34px;
+   height: 22px;
+}
+.mynewbutton select{
+    margin-left:17px;
+    width: 34px;
+    height: 22px;
+    
 }
 
 table.display-loading tr td{

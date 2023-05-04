@@ -286,7 +286,6 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn('vehicle/add', ' value="เพิ่ม" id="addBtn"  ') !!}
