@@ -180,7 +180,6 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 
 <div class='footerBtnCont'>
@@ -190,7 +189,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
    {!! SiteHelper::footerBtn('userGroup/editPagePermission', ' value="ตั้งค่าสิทธิ์การใช้หน้าต่างๆ" id="editPagePermissionBtn" '); !!}
    {!! SiteHelper::footerBtn('userGroup/viewPagePermission', ' value="เรียกดูสิทธิ์การใช้หน้าต่างๆ" id="viewPagePermissionBtn"  '); !!}
   
-   {!! SiteHelper::footerBtnRight('userGroup/deleteUserGroup', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn('userGroup/deleteUserGroup', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

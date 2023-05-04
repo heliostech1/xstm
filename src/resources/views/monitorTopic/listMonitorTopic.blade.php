@@ -176,13 +176,11 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
-
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn("$fieldPrefix/add", ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn("$fieldPrefix/edit", ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn("$fieldPrefix/view", ' value="เรียกดู" id="viewBtn"  '); !!}
-   {!! SiteHelper::footerBtnRight("$fieldPrefix/delete", ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn("$fieldPrefix/delete", ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

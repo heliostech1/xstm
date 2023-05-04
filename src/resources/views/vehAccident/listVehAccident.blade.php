@@ -213,13 +213,12 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn('vehAccident/add', ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn('vehAccident/edit', ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn('vehAccident/view', ' value="เรียกดู" id="viewBtn"  '); !!}      
-   {!! SiteHelper::footerBtnRight('vehAccident/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn('vehAccident/delete', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

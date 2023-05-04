@@ -40,7 +40,7 @@ $(document).ready(function() {
 @section('content')
 
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -93,11 +93,11 @@ $(document).ready(function() {
 <div class='footerBtnCont'>
 
     <?php if ($pageMode == 'edit'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
    
     <?php elseif ($pageMode == 'view'): ?>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
 
     <?php endif; ?>
        

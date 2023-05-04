@@ -302,11 +302,11 @@ function getPagePermissionDatas() {
 
 <div class='footerBtnCont' style='margin-top:10px'>
     <?php if ($pageMode == 'edit'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="บันทึก" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="กลับ" onClick="window.location.href='./index?keep=1';" /></div>    
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="บันทึก" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="กลับ" onClick="window.location.href='./index?keep=1';" /></div>    
    
     <?php elseif ($pageMode == 'view'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="กลับ" onClick="window.location.href='./index?keep=1';" /></div>    
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="กลับ" onClick="window.location.href='./index?keep=1';" /></div>    
     <?php endif; ?>
         <div style='clear: both'></div>
 </div>

@@ -189,14 +189,13 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn('monitorPlan/add', ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn('monitorPlan/add', ' value="เพิ่มโดยคัดลอก" id="addByCopyBtn"  ') !!}   
    {!! SiteHelper::footerBtn('monitorPlan/edit', ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn('monitorPlan/view', ' value="เรียกดู" id="viewBtn"  '); !!}
-   {!! SiteHelper::footerBtnRight('monitorPlan/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn('monitorPlan/delete', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 
