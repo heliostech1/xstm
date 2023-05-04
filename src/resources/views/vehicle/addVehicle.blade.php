@@ -191,7 +191,8 @@ $(document).ready(function() {
         {!! SiteHelper::checkPermission('vehicle/editFuel', "<li ><a href='#tabFuel' >ข้อมูลเชื้อเพลิง</a></li>") !!}        
         {!! SiteHelper::checkPermission('vehicle/editChiller', "<li ><a href='#tabChiller' >ข้อมูลเครื่องทำความเย็น</a></li>") !!}     
         {!! SiteHelper::checkPermission('vehicle/editCare', "<li ><a href='#tabCare' >ข้อมูลการให้บริการ</a></li>") !!}  
-        {!! SiteHelper::checkPermission('vehicle/editMonitor', "<li ><a href='#tabMonitor' >ข้อมูลการซ่อมบำรุง</a></li>") !!}         
+        {!! SiteHelper::checkPermission('vehicle/editMonitor', "<li ><a href='#tabMonitor' >ข้อมูลการซ่อมบำรุง</a></li>") !!}  
+             
         
         <?php endif; ?>
 

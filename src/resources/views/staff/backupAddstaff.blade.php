@@ -96,13 +96,14 @@ $(document).ready(function() {
         {!! SiteHelper::checkPermission('staff/viewWork', "<li ><a href='#tabWork' >ข้อมูลการทำงาน</a></li>") !!}
         {!! SiteHelper::checkPermission('staff/viewAbsent', "<li ><a href='#tabAbsent' >ข้อมูลวันหยุด/ลา</a></li>") !!}
         <?php else: ?>
-        {!! SiteHelper::checkPermission('staff/editLicense', "<li ><a href='#tabLicense' >ข้อมูลใบขับขี่</a></li>") !!}
+        {!! SiteHelper::checkPermission('staff/editLicense', "<li ><a href='#tabLicense' >ข้อมูลใบขับขี่กหกห</a></li>") !!}
         {!! SiteHelper::checkPermission('staff/editWork', "<li ><a href='#tabWork' >ข้อมูลการทำงาน</a></li>") !!}
         {!! SiteHelper::checkPermission('staff/editAbsent', "<li ><a href='#tabAbsent' >ข้อมูลวันหยุด/ลา</a></li>") !!}
 
         
         <?php endif; ?>
 
+        
     </ul>
 </div>
 
