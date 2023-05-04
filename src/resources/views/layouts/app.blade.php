@@ -100,19 +100,19 @@
     
 #siteWrapper {
     min-height: 100%;
-    height: auto !important; /* */
+    height: auto !important; 
     
-    /*  background-color: #f9f8f8; */
+     background-color: #FFFFFF;
      /* border:2px solid yellow;    */
 
 }
-
     
 .siteBody {
-   padding:100px 100px 0px 99px !important;  
+   padding:100px 100px 20px 99px !important;  
    background-color:#FFFFFF !important;   
-   height: 100vh;
-   
+   min-height: 90vh;
+   height: auto;
+   width: 100%;
   /* border:2px solid blue; */
    
 }
@@ -194,10 +194,12 @@
 
 .siteFooter {
     clear: both;
-    width:93.25%;
+    width:100%;
     height: 120px;
     margin-bottom: -50px;
-    bottom: 0;
+    padding-left: 150px;
+    padding-right: 50px;
+    padding-top: 20px;
     position: absolute;
     border-top: 1px solid #3C4C59;
     /* color: #eee; */
@@ -350,10 +352,11 @@ $(document).ready(function () {
         <div class='sitePageContainer'>
              @yield('content')                   
         </div>
-        <footer class='siteFooter' >       
+        
+    </div>
+    <footer class='siteFooter' >       
             @yield('siteFooterInfoHtml')
         </footer>
-    </div>
     <?php else:?>    
     <div class="loginBody" >
        <div class='loginPageContainer'>

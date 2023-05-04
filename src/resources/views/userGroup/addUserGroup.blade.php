@@ -49,7 +49,7 @@ function changeHeaderColor() {
 @section('content')
 
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -70,15 +70,15 @@ function changeHeaderColor() {
     <tbody>
         <tr>
             <td class="formLabel">รหัส:</td>
-            <td><input class="textInput"  type="text" style="width:260px" value='{{ $userGroupId }}' name="userGroupId" id="userGroupIdInput" ></td>
+            <td><input class="textInput"  type="text"  value='{{ $userGroupId }}' name="userGroupId" id="userGroupIdInput" ></td>
         </tr>    
         <tr>
             <td class="formLabel">ชื่อกลุ่มผู้ใช้:</td>
-            <td><input class="textInput"  type="text" style="width:260px" value='{{ $user_group_name }}' name="user_group_name" ></td>
+            <td><input class="textInput"  type="text"  value='{{ $user_group_name }}' name="user_group_name" ></td>
         </tr>
         <tr>
             <td class="formLabel">สี:</td>
-            <td><input class="textInput color {required:false}" type="text" style="width:260px" 
+            <td><input class="textInput color {required:false}" type="text" 
             onchange="changeHeaderColor();"
             value='{{ $color }}' name="color" id="colorInput" ></td>
         </tr>           
