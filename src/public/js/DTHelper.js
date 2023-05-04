@@ -70,8 +70,8 @@ var DTHelper = {
     thaiLang : {
         "sLengthMenu" : "แสดง _MENU_ รายการ/หน้า",
         "sZeroRecords" : "ไม่พบรายการใดๆ",
-        "sInfo" : "แสดงรายการที่ _START_ -  _END_ จากทั้งหมด _TOTAL_ ",
-        "sInfoEmpty" : "ไม่พบรายการ",
+        "sInfo" : "",//"แสดงรายการที่ _START_ -  _END_ จากทั้งหมด _TOTAL_ ",
+        "sInfoEmpty" : "",//"ไม่พบรายการ",
         "sInfoFiltered" : "(ถูกกรองจากทั้งหมด _MAX_ รายการ)",
         "sProcessing": "กำลังโหลด...",        
         "oPaginate" : {

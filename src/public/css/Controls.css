@@ -381,8 +381,8 @@ TABLE.formTable TD {
   
 .footerBtnCont {
    width: 98%; 
-   margin: 15px 5px 5px 5px;
-   padding-top: 15px;
+   margin: 0px 5px 5px 5px;
+   padding-top: 10px;
 
 }
 .footerBtnLeft {

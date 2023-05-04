@@ -17,9 +17,13 @@ $.fn.dataTableExt.oPagination.full_numbers = {
     
         
         $(nPaging).append(
-            '<div style="display:inline;padding-right:10px">'+
-            '<a tabindex="0" class="paginate_button" >&darr;</a>'+
-            '<a tabindex="0" class="paginate_button" >&uarr;</a>'+
+            // '<div style="display:inline;padding-right:10px ">'+
+            // '<a tabindex="0" class="paginate_button" >&darr;</a>'+
+            // '<a tabindex="0" class="paginate_button" >&uarr;</a>'+
+            // '</div>'
+            '<div ">'+
+            '<a tabindex="0"  ></a>'+
+            '<a tabindex="0"  ></a>'+
             '</div>'
         );
         
@@ -27,7 +31,7 @@ $.fn.dataTableExt.oPagination.full_numbers = {
             '<div style="display:inline">'+
             '<a  tabindex="'+oSettings.iTabIndex+'" class="'+oClasses.sPageButton+" "+oClasses.sPageFirst+'">'+oLang.sFirst+'</a>'+
             '<a  tabindex="'+oSettings.iTabIndex+'" class="'+oClasses.sPageButton+" "+oClasses.sPagePrevious+'">'+oLang.sPrevious+'</a>'+
-            '<span class="paging_full_numbers_item_container"></span>'+
+            // '<span class="paging_full_numbers_item_container"></span>'+
             '<a tabindex="'+oSettings.iTabIndex+'" class="'+oClasses.sPageButton+" "+oClasses.sPageNext+'">'+oLang.sNext+'</a>'+
             '<a tabindex="'+oSettings.iTabIndex+'" class="'+oClasses.sPageButton+" "+oClasses.sPageLast+'">'+oLang.sLast+'</a>'+
             '</div>'
@@ -175,12 +179,12 @@ $.fn.dataTableExt.oPagination.full_numbers = {
     
     
     "initListbox": function (oSettings, nPaging, fnCallbackDraw) {
-        var nContainer = $("<div style='display:inline;' class='dataTable_paginationListboxCont' >");
+        var nContainer = $("<div style='display:inline;' class='mynewbutton' >");
         var nInput = $("<select style='display:inline' tabIndex='-1' >");
 
         nContainer.append(nInput);
-        nContainer.append(" / ");
-        nContainer.append("<span class='paging_full_numbers_total_page_container' >");
+        // nContainer.append(" / "); แก้ปุ่ม
+        // nContainer.append("<span class='paging_full_numbers_total_page_container' >");
         
         $(nPaging).append(nContainer);
 
