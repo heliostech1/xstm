@@ -29,14 +29,15 @@
     outline: none;
     box-shadow: none;
     background-color: initial;
+    
   }
 
 .formButton {
     margin: 0;
     height: 22px;
-    border: 1px solid #F57D00;
+    border: 1px solid #3C4C59;
     border-radius: 4px;
-    color: #F57D00;
+    color: #3C4C59;
     font-family: 'Noto Sans Thai', sans-serif;
     
     /* min-width: 45px; */
@@ -501,20 +502,22 @@ TABLE.formTable TD {
     position:relative; 
     left:-10px;
     border: 1px solid black;
-    margin:2px 0px !important;   
+    margin:2px 0px !important;
+    color: #FFFFFF;
  }
  
  .tableInnerDisplay thead th {
     white-space: nowrap;
     padding: 3px 5px 3px 5px;
-    border-bottom: 1px solid black;
+    border: 1px solid #3C4C59;
     font-weight: normal;
     cursor: pointer;
-    background-color:#e7e7e7;
+    background-color:#3C4C59;
+    
 }
 
  .tableInnerDisplay tbody tr.odd {
-    background-color:white;
+    background-color:#FEF5EB;
  }
  
  .tableInnerDisplay tbody td {
@@ -891,3 +894,4 @@ td.groupCell{
   height: 250px;
   margin: 20px 20px 40px 40px;
 }
+

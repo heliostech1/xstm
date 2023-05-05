@@ -126,10 +126,16 @@ $(document).ready(function() {
 
 <!-- SECTION BUTTON PANEL -->
 
+<style>
+    .footerBtnLeft input[type="button"][value="ตกลง"] {
+        background-color: black;
+        color: white;
+    }
+</style>
 <div class='footerBtnCont'>
-
+    
     <?php if ($pageMode == 'add'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'  ><input type="button" class='formButton' value="ตกลง" id="saveBtn" style="color: white "/></div>
     <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
     
     <?php elseif ($pageMode == 'edit'): ?>

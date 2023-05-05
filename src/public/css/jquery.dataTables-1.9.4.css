@@ -32,6 +32,7 @@ table.dataTable td.dataTables_empty {
 	font-size: 15px;
 	font-family: 'Noto Sans Thai', sans-serif;
 	padding: 10px 0px;
+	color:black;
 }
 
 table.dataTable tr.odd { background-color: #E2E4FF; }

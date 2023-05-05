@@ -49,7 +49,7 @@ $(document).ready(function() {
     <?php if ($pageMode == 'edit'): ?>
 
     //FieldHelper.applyViewMode('keyIdInput');
-
+        
     <?php elseif ($pageMode == 'view'): ?>
     
     FormHelper.applyViewMode('mainForm');
@@ -146,7 +146,7 @@ $(document).ready(function() {
 <hr class="titleSectionSep">
 
 
-<?php if (!empty($message)) echo "<div class='infoMessage'>$message</div>"?> 
+<?php if (!empty($message)) echo "<div class='infoMessage'>$message</div>"?>
 
 
 <?php if ($pageMode == 'add'): ?>
@@ -243,7 +243,7 @@ $(document).ready(function() {
 <!-- SECTION BUTTON PANEL -->
 
 <div class='footerBtnCont'>
-
+    
     <?php if ($pageMode == 'add'): ?>
     <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
     <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
@@ -251,7 +251,7 @@ $(document).ready(function() {
     <?php elseif ($pageMode == 'edit'): ?>
     <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
     <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
-   
+    
     <?php elseif ($pageMode == 'view'): ?>
     <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
 
