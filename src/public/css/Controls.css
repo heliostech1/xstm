@@ -319,6 +319,10 @@ select.textReadOnly {
 .orangecheckbox input:checked{
     display: block;
 }
+input[type="checkbox"] {
+    outline: 3px solid orange;
+    accent-color:  #C70039;  
+}
 
 /* =========================================================================================== 
 
@@ -356,7 +360,6 @@ TABLE.formTable TD {
    font-size: 15px;
    gap: 5px;
    padding: 10px 0px;
-   text-align: right;
    padding-right: 5px;
 }
 /* =========================================================================================== 
