@@ -178,7 +178,6 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 
 <div class='footerBtnCont'>
@@ -186,7 +185,7 @@ function submitPageData(target, oTable, rowId, newWindow) {
    {!! SiteHelper::footerBtn('user/edit', ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn('user/view', ' value="เรียกดู" id="viewBtn"  '); !!}
    {!! SiteHelper::footerBtn('user/viewSiteUsageHistory', ' value="ดูประวัติการเข้าใช้" id="viewHistoryBtn" '); !!}
-   {!! SiteHelper::footerBtnRight('user/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn('user/delete', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

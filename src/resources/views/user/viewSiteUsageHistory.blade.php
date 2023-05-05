@@ -129,7 +129,7 @@ $(document).ready(function() {
 <!-- SECTION BUTTON PANEL -->
 
 <div class='footerBtnCont'>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
     <div style='clear: both'></div>
 </div>
 

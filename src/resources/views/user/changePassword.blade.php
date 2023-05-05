@@ -32,7 +32,7 @@
 
 
 <div class='footerBtnCont'>
-    <div class='footerBtnLeft'><input type="submit" class='formButton' value="เปลื่ยน"  /></div>
+    <div class='footerBtnLeft'><input type="submit" class='blackBtn' value="เปลื่ยน" /></div>
      <div style='clear: both'></div>
 </div>
 

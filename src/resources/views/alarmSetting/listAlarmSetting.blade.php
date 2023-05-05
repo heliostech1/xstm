@@ -123,9 +123,6 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
-
-
 
 <div class='footerBtnCont'>
 

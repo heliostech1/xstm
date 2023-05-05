@@ -44,7 +44,12 @@
 #addBtn.formButton:hover,
 #editBtn.formButton:hover,
 #viewBtn.formButton:hover,
-#deleteBtn.formButton:hover{
+#deleteBtn.formButton:hover,
+#addByCopyBtn.formButton:hover,
+#editPagePermissionBtn:hover,
+#viewPagePermissionBtn:hover,
+#viewHistoryBtn:hover,
+.blackBtn:hover{
     margin: 0;
     height: 22px;
     border: 1px solid rgba(60, 76, 89, 1);
@@ -56,7 +61,12 @@
 #addBtn.formButton,
 #editBtn.formButton,
 #viewBtn.formButton,
-#deleteBtn.formButton{
+#deleteBtn.formButton,
+#addByCopyBtn.formButton,
+#editPagePermissionBtn,
+#viewPagePermissionBtn,
+#viewHistoryBtn,
+.blackBtn{
     margin: 0;
     height: 22px;
     border: 1px solid rgba(60, 76, 89, 1);
@@ -97,6 +107,7 @@
     background-color: #000;
     color: #ffffff;
 }
+
 .textReadOnly {
     height:20px;
     width: 200px;
@@ -304,6 +315,10 @@ select.textReadOnly {
     text-align: center;
 }
 
+/*checkbox สีส้ม*/
+.orangecheckbox input:checked{
+    display: block;
+}
 
 /* =========================================================================================== 
 
@@ -337,13 +352,13 @@ span.formLabel {
 }
 
 TABLE.formTable TD {
-    font-family: 'Noto Sans Thai', sans-serif;
+   font-family: 'Noto Sans Thai', sans-serif;
    font-size: 15px;
    gap: 5px;
    padding: 10px 0px;
+   text-align: right;
+   padding-right: 5px;
 }
-
-
 /* =========================================================================================== 
 
  Section/ Title

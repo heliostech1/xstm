@@ -176,8 +176,6 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
-
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn("$fieldPrefix/add", ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn("$fieldPrefix/edit", ' value="แก้ไข" id="editBtn" '); !!}

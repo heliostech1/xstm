@@ -51,7 +51,7 @@ function applyChangePasswordField() {
 @section('content')
 
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -79,59 +79,59 @@ function applyChangePasswordField() {
     <tbody>
         <tr>
             <td class="formLabel" >รหัสผู้ใช้:</td>
-            <td><input class="textInput" type="text" style="width:260px" value='{{ $userId }}' name="userId" autocomplete="off">
+            <td><input class="textInput" type="text" value='{{ $userId }}' name="userId" autocomplete="off">
             <input type='hidden' value='{{ $old_userId }}' name="old_userId"/></td>
         </tr>
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>        
         <tr>
             <td class="formLabel">สถานะ:</td>
-            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' style='width:264px' ") !!}
+            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' ") !!}
             </td>
         </tr>
 <?php endif; ?>          
         <tr>
             <td class="formLabel">รายละเอียดผู้ใช้:</td>
-            <td><input class="textInput" type="text" style="width:260px"  value='{{ $description }}' 
+            <td><input class="textInput" type="text"   value='{{ $description }}' 
             name="description" autocomplete="off"></td>
         </tr>
 
 <?php if ($pageMode == 'edit'): ?>
         <tr>
             <td class="formLabel">ต้องการเปลี่ยนรหัสผ่าน?:</td>
-            <td><input type="checkbox" id="changePassword" name="change_password" {{ $change_password }} ></td>
+            <td style="text-align: left;"><input type="checkbox" id="changePassword" name="change_password" {{ $change_password }} class="orangecheckbox"></td>
         </tr>
 <?php endif; ?>        
 <?php if ($pageMode == 'add' || $pageMode == 'edit'): ?>
         <tr>
             <td class="formLabel">รหัสผ่าน:</td>
-            <td><input class="textInput" type="password" style="width:260px" id="password" name="password" value='{{ $password }}'   autocomplete="off"></td>
+            <td><input class="textInput" type="password"  id="password" name="password" value='{{ $password }}'   autocomplete="off"></td>
         </tr>
         <tr>
             <td class="formLabel">ยืนยันรหัสผ่าน:</td>
-            <td><input class="textInput" type="password" style="width:260px" id="passwordConfirm" name="password_confirm" value='{{ $password_confirm }}' autocomplete="off"></td>
+            <td><input class="textInput" type="password"  id="passwordConfirm" name="password_confirm" value='{{ $password_confirm }}' autocomplete="off"></td>
         </tr>
 <?php endif; ?>    
         <!--      
         <tr>
             <td class="formLabel">สาขา:</td>
-            <td>{!! SiteHelper::dropdown('branchId', $branch_opt, $branchId, "class='textInput' style='width:264px' ") !!}
+            <td>{!! SiteHelper::dropdown('branchId', $branch_opt, $branchId, "class='textInput'  ") !!}
         </tr>
          -->
         <tr>
             <td class="formLabel">กลุ่มผู้ใช้:</td>
-            <td>{!! SiteHelper::dropdown('userGroupId', $user_group_opt, $userGroupId, "class='textInput' style='width:264px' ") !!}
+            <td>{!! SiteHelper::dropdown('userGroupId', $user_group_opt, $userGroupId, "class='textInput'  ") !!}
         </tr>
         <tr>
             <td class="formLabel">ชื่อที่ติดต่อได้:</td>
-            <td><input class="textInput" type="text" style="width:260px" value='{{ $contactName }}' name="contactName"></td>
+            <td><input class="textInput" type="text"  value='{{ $contactName }}' name="contactName"></td>
         </tr>
         <tr>
             <td class="formLabel">โทรศัพท์ที่ติดต่อได้:</td>
-            <td><input class="textInput" type="text" style="width:260px" value='{{ $contactPhone }}' name="contactPhone"></td>
+            <td><input class="textInput" type="text"  value='{{ $contactPhone }}' name="contactPhone"></td>
         </tr>
         <tr>
             <td class="formLabel">อีเมล์ที่ติดต่อได้:</td>
-            <td><input class="textInput" type="text" style="width:260px" value='{{ $contactEmail }}' name="contactEmail"></td>
+            <td><input class="textInput" type="text"  value='{{ $contactEmail }}' name="contactEmail"></td>
         </tr>
 
     </tbody>
@@ -146,15 +146,15 @@ function applyChangePasswordField() {
 <div class='footerBtnCont'>
 
     <?php if ($pageMode == 'add'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft'  style="padding-left:100px;"><input type="button" class='blackBtn' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'  ><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
     
     <?php elseif ($pageMode == 'edit'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft' style="padding-left:150px;"><input type="button" class='blackBtn' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
    
     <?php elseif ($pageMode == 'view'): ?>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
 
     <?php endif; ?>
        
