@@ -150,18 +150,15 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 
 .paging_full_numbers a.paginate_button,
 .paging_full_numbers a.paginate_active {
-	border: 1px solid rgba(60, 76, 89, 1);
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
 	padding: 2px 5px;
 	margin: 0 3px;
 	cursor: pointer;
 	*cursor: hand;
-	background-color: #fff !important;
-	font-weight: 500;
-	font-size: 14px;
-	color: rgba(60, 76, 89, 1);
-	width: 34px;
-	height: 22px;
+	color: #333 !important;
 }
 
 .paging_full_numbers a.paginate_button {

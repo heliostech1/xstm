@@ -22,7 +22,7 @@ var PermissionTableHelper = {
         var datas = [], result, pageId, mode;
         this.table.find('tbody').find('tr').each(function() {
             pageId = $(this).find('td:nth-child(1)').find('span').html();
-            result = $(this).find('td:nth-child(4)').hasClass('cellPass')? 1: 0;
+            result = $(this).find('td').hasClass('cellPass')? 1: 0;
             mode = $(this).find('td:nth-child(5)').find('select').val();
             mode = AppUtil.isEmpty(mode)? "normal": mode;
              
@@ -33,7 +33,7 @@ var PermissionTableHelper = {
 
     tickResult: function(el, tick) {
         var nRow = $(el).parents('tr')[0];
-        var passTd = $(nRow).find('td:nth-child(4)');  
+        var passTd = $(nRow).find('td');  
         var passCb = $(passTd).find('input');
 
         if (tick === true) {
@@ -154,7 +154,7 @@ $(document).ready(function() {
             
             //--------------
             
-            var passTd = $(nRow).find('td:nth-child(4)');     
+            var passTd = $(nRow).find('td');     
             var passCb = $(passTd).find('input');
 
             if (passCb.is(':checked')) {
