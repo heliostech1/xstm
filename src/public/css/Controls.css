@@ -991,3 +991,23 @@ a.select2-choice {
     border: 1px solid #3C4C59;
     color: #000;
 }
+#Two-oneoneFuel {
+    border: 1px solid #3C4C59;
+    color: #000;
+    text-align: left;
+}
+#Two-oneoneFuel TD{
+    border: 1px solid #3C4C59;
+    color: #000;
+    text-align: left;
+}
+#uploadImageDrop_adder_partFuel_uploader{
+    background: #FEF5EB;
+    border: 0.5px solid #000;
+    border-radius: 4px;
+}
+#partMonitor_monitorPlan
+{
+    border: 1px solid #3C4C59;
+    color: #000;
+}

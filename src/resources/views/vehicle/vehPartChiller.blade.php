@@ -310,21 +310,21 @@ function partChiller_getOperateByInput(tableId, rowId, val) {
 
         <tr>
             <td class="formLabel" style='width:200px' >ยี่ห้อเครื่องทำความเย็น</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_brand }}' name="partChiller_brand">
+            <td style='text-align:left' ><input id=Two-oneone class="textInput" type="text" style="width:400px" value='{{ $partChiller_brand }}' name="partChiller_brand">
             </td>
         </tr>           
         <tr>
             <td class="formLabel">โมเดลเครื่องทำความเย็น</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_model }}' name="partChiller_model">
+            <td style='text-align:left'><input id=Two-oneone class="textInput" type="text" style="width:400px" value='{{ $partChiller_model }}' name="partChiller_model">
             </td>
         </tr>         
         <tr>
             <td class="formLabel">ชนิดสารทำความเย็น:</td>
-            <td> {!! SiteHelper::dropdown("partChiller_refrigerant", $refrigerantOpt, $partChiller_refrigerant, "  class='textInput' style='width:400px'  ") !!} </td> 
+            <td style='text-align:left'> {!! SiteHelper::dropdown("partChiller_refrigerant", $refrigerantOpt, $partChiller_refrigerant, "  class='textInput' style='width:400px' id=Two-oneone  ") !!} </td> 
         </tr>   
         <tr>
             <td class="formLabel">ช่วงอุณหภูมิทำความเย็น:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_temperature }}' name="partChiller_temperature">
+            <td style='text-align:left'><input id=Two-oneone class="textInput" type="text" style="width:400px" value='{{ $partChiller_temperature }}' name="partChiller_temperature">
             </td>
         </tr>          
 

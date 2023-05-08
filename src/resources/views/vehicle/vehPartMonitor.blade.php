@@ -216,13 +216,13 @@ function partMonitor_getAlertAtInput(tableId, rowId, val) {
             
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง:</td>
-            <td> {!! SiteHelper::dropdown("partMonitor_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='partMonitor_monitorPlan' class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง</td>
+            <td style='text-align:left'> {!! SiteHelper::dropdown("partMonitor_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='partMonitor_monitorPlan' class='textInput' style='width:400px'   ") !!} </td> 
         </tr> 
   
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลซ่อมบำรุง:</td>
+            <td class="formLabel" style="padding-top: 10px">ข้อมูลซ่อมบำรุง</td>
             <td>
 
                  <div class='customTableStyle' > 

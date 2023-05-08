@@ -202,17 +202,17 @@ var PartCareWorkerTableHelper = new PartCareBaseDriverTableHelper();
             
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >ชื่อผู้ให้บริการ:</td>
-            <td> {!! SiteHelper::dropdown("partCare_vehicleCare", $vehicleCareOpt, $partCare_vehicleCare, "  class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel"  style='width:200px' >ชื่อผู้ให้บริการ</td>
+            <td style='text-align:left'> {!! SiteHelper::dropdown("partCare_vehicleCare", $vehicleCareOpt, $partCare_vehicleCare, "  class='textInput' style='width:400px' id=Two-oneone  ") !!} </td> 
         </tr> 
         <tr>
-            <td class="formLabel">ชนิดของรถ:</td>
-            <td> {!! SiteHelper::dropdown("partCare_vCareType", $vCareTypeOpt, $partCare_vCareType, "  class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel">ชนิดของรถ</td>
+            <td style='text-align:left'> {!! SiteHelper::dropdown("partCare_vCareType", $vCareTypeOpt, $partCare_vCareType, "  class='textInput' style='width:400px'  id=Two-oneone ") !!} </td> 
         </tr> 
         
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ผู้ชับขี่ประจำรถ:</td>
+            <td class="formLabel" style="padding-top: 10px">ผู้ชับขี่ประจำรถ</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 800px; text-align: right;' >
@@ -241,7 +241,7 @@ var PartCareWorkerTableHelper = new PartCareBaseDriverTableHelper();
         </tr>  
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">แรงงานประจำรถ:</td>
+            <td class="formLabel" style="padding-top: 10px">แรงงานประจำรถ</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 800px; text-align: right;' >
