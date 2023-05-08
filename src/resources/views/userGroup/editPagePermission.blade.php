@@ -3,7 +3,55 @@
 
 @section('header')
 
+<style>
+    /* Hide the default checkbox */
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
+/* Create a custom circular checkmark */
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #4CAF50; /* Change border color to green */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the checkmark when the checkbox is checked */
+.hidden-checkbox:checked ~ .checkmark {
+  background-color: #4CAF50; /* Change background color to green */
+  border: 2px solid #4CAF50;
+}
+
+/* Create the checkmark indicator when the checkbox is checked */
+.hidden-checkbox:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark on hover */
+.custom-checkbox:hover .checkmark {
+  border: 2px solid #3f9a40; /* Change hover border color */
+}
+
+</style>
 <script type='text/javascript'>
 
 
@@ -109,8 +157,9 @@ $(document).ready(function() {
                               else { 
                                   var passCheck = (data == '1')? "checked":"";
                                   var disableCb = (isViewMode)? "disabled": "";
-                                      
-                                  return  "<input type='checkbox' onClick='PermissionTableHelper.tickResult(this)' "+passCheck+"  "+disableCb+"></input>";
+                                  return "<label class='custom-checkbox'><input type='checkbox' class='hidden-checkbox' onclick='PermissionTableHelper.tickResult(this)' "+passCheck+"  "+disableCb+"><span class='checkmark'></span></label>";
+
+                                //   return  "<input type='checkbox' onClick='PermissionTableHelper.tickResult(this)' "+passCheck+"  "+disableCb+"></input>";
                               }
                           }
                       },
