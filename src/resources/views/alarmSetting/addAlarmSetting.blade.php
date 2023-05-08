@@ -117,14 +117,14 @@ $(document).ready(function() {
 
 <!-- SECTION BUTTON PANEL -->
 
-<div class='footerBtnCont'>
+<div class='footerBtnCont' style="padding-left: 180px;">
 
     <?php if ($pageMode == 'edit'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="OK" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="OK" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
    
     <?php elseif ($pageMode == 'view'): ?>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
 
     <?php endif; ?>
        

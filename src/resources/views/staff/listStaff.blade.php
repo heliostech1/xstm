@@ -215,13 +215,12 @@ function submitPageData(target, oTable, rowId, newWindow) {
     <tbody>
     </tbody>    
 </table>
-<br>
 
 <div class='footerBtnCont'>
    {!! SiteHelper::footerBtn('staff/add', ' value="เพิ่ม" id="addBtn"  ') !!}
    {!! SiteHelper::footerBtn('staff/edit', ' value="แก้ไข" id="editBtn" '); !!}
    {!! SiteHelper::footerBtn('staff/view', ' value="เรียกดู" id="viewBtn"  '); !!}      
-   {!! SiteHelper::footerBtnRight('staff/delete', ' value="ลบ" id="deleteBtn" '); !!}
+   {!! SiteHelper::footerBtn('staff/delete', ' value="ลบ" id="deleteBtn" '); !!}
    <div style='clear: both'></div>
 </div>
 

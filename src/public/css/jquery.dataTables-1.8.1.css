@@ -69,7 +69,7 @@
 }
 
 .dataTables_paginate {
-    width: 44px; *
+    width: 44px; 
     width: 50px;
     float: right;
     text-align: right;
@@ -126,7 +126,7 @@ table.display thead th {
     padding: 3px 5px 3px 5px;
     border-bottom: 1px solid black;
     font-weight: normal;
-    cursor: pointer; *
+    cursor: pointer; 
     cursor: hand;
 }
 
