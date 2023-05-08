@@ -245,7 +245,7 @@ $(document).ready(function() {
 <div class='footerBtnCont'>
     
     <?php if ($pageMode == 'add'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" style="background-color:#3C4C59  " id="saveBtn" /></div>
     <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
     
     <?php elseif ($pageMode == 'edit'): ?>

@@ -54,17 +54,17 @@ function partBaseCheckOdometer() {
 <?php endif; ?>   
         <tr>
             <td class="formLabel" style='width:200px'  >ทะเบียนรถ:</td>
-            <td><input class="textInput" type="text" style="width:400px" id='licensePlate' value='{{ $licensePlate }}' name="licensePlate" autocomplete="off">
+            <td><input class="textInput" type="text" style="width:200px" id='licensePlate' value='{{ $licensePlate }}' name="licensePlate" autocomplete="off">
         </tr>               
         <tr>
             <td class="formLabel">จังหวัด:</td>
             <td>
-            {!! SiteHelper::dropdown("province", $provinceOpt, $province, "  class='textInput' style='width:400px' id='provinceInput' ") !!}
+            {!! SiteHelper::dropdown("province", $provinceOpt, $province, "  class='textInput' style='width:200px' id='provinceInput' ") !!}
            </td>            
         </tr> 
         <tr>
             <td class="formLabel">เลขไมล์:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $odometer }}' name="odometer" id="odometerInput"></td>
+            <td><input class="textInput" type="text" style="width:200px" value='{{ $odometer }}' name="odometer" id="odometerInput"></td>
         </tr>      
         <?php if ($pageMode == 'view'): ?>  
         <tr>

@@ -32,12 +32,13 @@
     
   }
 
+
 .formButton {
     margin: 0;
     height: 22px;
     border: 1px solid #3C4C59;
     border-radius: 4px;
-    color: #3C4C59;
+    color:#3C4C59;
     font-family: 'Noto Sans Thai', sans-serif;
     
     /* min-width: 45px; */
@@ -108,6 +109,7 @@
     background-color: #000;
     color: #ffffff;
 }
+
 
 .textReadOnly {
     height:20px;
@@ -357,12 +359,15 @@ span.formLabel {
 }
 
 TABLE.formTable TD {
-   font-family: 'Noto Sans Thai', sans-serif;
-   font-size: 15px;
-   gap: 5px;
-   padding: 10px 0px;
-   padding-right: 5px;
+   
+    font-size: 15px;
+    gap: 5px;
+    padding: 10px 0px;
+    padding-right: 30px;
+    text-align: right;
 }
+
+
 /* =========================================================================================== 
 
  Section/ Title
@@ -432,6 +437,10 @@ TABLE.formTable TD {
 .footerBtnLeft {
    float:left; 
    padding-left:7px;
+}
+.footerBtnLeft input[value="ตกลง"] {
+    background-color: #3C4C59;
+    color: white;
 }
 
 .footerBtnRight {
@@ -675,6 +684,9 @@ td.groupCell{
    padding:3px !important;
        
 }
+a.select2-choice {
+    text-align: left;
+}
 
 
 /* =========================================================================================== 
@@ -913,3 +925,17 @@ td.groupCell{
   margin: 20px 20px 40px 40px;
 }
 
+#licensePlate {
+    border: 1px solid #3C4C59;
+}
+#s2id_provinceInput {
+    border: 1px solid #3C4C59;
+}
+#odometerInput {
+    border: 1px solid #3C4C59;
+    
+}
+#Two-oneone {
+    border: 1px solid #3C4C59;
+    color: #000;
+}

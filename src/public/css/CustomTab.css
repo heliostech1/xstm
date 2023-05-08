@@ -12,7 +12,7 @@
     list-style: none;
     padding: 5px 0 4px 0;
     margin: 0 0 0 10px;
-    font: 0.75em arial;
+    font-size: 15px;
 }
 
 .spTabs_body {
@@ -53,14 +53,16 @@
 .spTabs li a:hover {
     /* background-color: #dddddd; */
     padding: 4px 6px;
+    
 }
 
 .spTabs li.active a {
-    border-bottom: 1px solid #fff;
-    background-color: #fff;
+    border-bottom: 1px solid #ffff;
+    background-color:#F57D00;
     padding: 4px 6px 6px 6px;
     border-bottom: none;
-    color: #000;
+    color: #ffff;
+    
 }
 
 .spTabs li.active a:hover {
