@@ -37,6 +37,10 @@ table.display thead tr {
     background-color: #FFFFFF;
     color: #3C4C59;
 }
+#permissionTable.display thead tr {
+    background-color: rgba(245, 125, 0, 0.08);
+    color: #3C4C59;
+}
 
 table.display thead th {
     white-space: nowrap;
