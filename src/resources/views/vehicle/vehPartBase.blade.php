@@ -69,7 +69,7 @@ function partBaseCheckOdometer() {
         <?php if ($pageMode == 'view'): ?>  
         <tr>
             <td class="formLabel"  >อายุรถ (ปี):</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $ageYear }}'  autocomplete="off">
+            <td><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $ageYear }}'  autocomplete="off">
         </tr>  
         <?php endif; ?>          
     </tbody>

@@ -1021,3 +1021,27 @@ a.select2-choice {
     color: #000;
     text-align: center;
 }
+
+#Two-onethreeTable{
+    background-color: #3C4C59;
+}
+
+.customTableStyle {
+    background-color: #3C4C59; /* เปลี่ยนสีพื้นหลัง */
+  }
+  
+  .customTableStyle th, .customTableStyle td {
+    color: #ffffff; /* เปลี่ยนสีตัวอักษร */
+  }
+  
+  .customTableStyle th {
+    background-color: #3C4C59; /* เปลี่ยนสีพื้นหลังของหัวข้อตาราง */
+  }
+  
+  .customTableStyle tbody tr:nth-child(even) {
+    background-color: #FEF5EB; /* เปลี่ยนสีพื้นหลังของแถวคู่ */
+  }
+  
+  
+  
+  

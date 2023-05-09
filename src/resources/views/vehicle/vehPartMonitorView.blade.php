@@ -110,20 +110,20 @@ var PartMonitorViewTableHelper = {
 
         <tr>
             <td class="formLabel" style='width:200px' >รหัสรถ</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
+            <td style=text-align:left><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
+            <td class="formLabel" style='width:200px' >ทะเบียนรถ</td>
+            <td style=text-align:left><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
         <tr>
-            <td class="formLabel" style='width:200px' >เลขไมล์:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $odometer }}'  autocomplete="off">
+            <td class="formLabel" style='width:200px' >เลขไมล์</td>
+            <td style=text-align:left><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $odometer }}'  autocomplete="off">
         </tr>  
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง:</td>
-            <td> {!! SiteHelper::dropdown("partMonitorView_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='partMonitorView_monitorPlan' class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง</td>
+            <td> {!! SiteHelper::dropdown("partMonitorView_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='Two-oneone' class='textInput' style='width:400px'  ") !!} </td> 
         </tr> 
   
     </tbody>

@@ -251,7 +251,7 @@ var PartOwnerTableHelper = {
     <tbody>
 
         <tr>
-            <td class="formLabel" style='width:500px'text-align: center; >รหัสรถ</td>
+            <td class="formLabel" style='width:500px'text-align: center; >รหัสรถdd</td>
             <td style='text-align: center'><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
@@ -260,8 +260,8 @@ var PartOwnerTableHelper = {
         </tr>  
         <?php if ($pageMode == 'view'): ?>  
         <tr>
-            <td class="formLabel"  >อายุรถ (ปี):</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $ageYear }}'  autocomplete="off">
+            <td class="formLabel"  >อายุรถ (ปี)</td>
+            <td><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $ageYear }}'  autocomplete="off">
         </tr>  
         <?php endif; ?>          
     </tbody>
