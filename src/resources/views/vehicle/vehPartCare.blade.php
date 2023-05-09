@@ -190,16 +190,15 @@ var PartCareWorkerTableHelper = new PartCareBaseDriverTableHelper();
     <tbody>
 
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
-
-        <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:200px"  value='{{ $vehicleId }}'  autocomplete="off">
-        </tr>        
-        <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
-        </tr>  
-            
+    <tr >
+        <td style='text-align:right' class="formLabel" style='width:400px' >รหัสรถ</td>
+        <td style='text-align:left' ><input  id=Two-onetwoPartCare class="textReadOnly" readonly type="text" style="width:200px "  value='{{ $vehicleId }}'  autocomplete="off">
+                
+    </tr>        
+    <tr>
+        <td class="formLabel" style='width:200px' >ทะเบียนรถ</td>
+        <td style='text-align:left'><input id=Two-onetwoPartCare class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
+     </tr>  
 <?php endif; ?>   
         <tr>
             <td class="formLabel"  style='width:200px' >ชื่อผู้ให้บริการ</td>
