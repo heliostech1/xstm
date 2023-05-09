@@ -278,12 +278,12 @@ var PartRegisTableHelper = {
     <tbody>
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
+            <td  class="formLabel" style='width:500px;'>รหัสรถ</td>
+            <td ><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
+            <td class="formLabel" style='width:500px;'>ทะเบียนรถ</td>
+            <td ><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
         <?php if ($pageMode == 'view'): ?>  
         <tr>

@@ -32,22 +32,22 @@
 
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
-        <tr id>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
+        <tr >
+            <td class="formLabel" style='width:200px' >รหัสรถ</td>
+            <td style="text-align: left"><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px;"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr id=2-11>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
+            <td class="formLabel" style='width:200px' >ทะเบียนรถ</td>
+            <td style="text-align: left"><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
             
 <?php endif; ?>   
         <tr>
-            <td class="formLabel" style='width:200px' >ชนิดตู้สินค้า:</td>
+            <td class="formLabel" style='width:200px' >ชนิดตู้สินค้า</td>
             <td> {!! SiteHelper::dropdown("partContainer_containerType", $goodsContainerOpt, $partContainer_containerType, "  class='textInput' style='width:400px'id=Two-oneone ") !!} </td> 
         </tr> 
         <tr >
-            <td class="formLabel">ขนาดภายในตู้ (เมตร):</td>
+            <td class="formLabel">ขนาดภายในตู้ (เมตร)</td>
             <td> กว้าง <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_width }}' name="partContainer_width" id=Two-oneone>
             &nbsp;&nbsp; ยาว  <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_long }}' name="partContainer_long" id=Two-oneone>
             &nbsp;&nbsp; สูง  <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_height }}' name="partContainer_height" id=Two-oneone>
@@ -60,7 +60,7 @@
             </td>
         </tr>   
         <tr>
-            <td class="formLabel">ขนาดตู้ภายนอก (เมตร):</td>
+            <td class="formLabel">ขนาดตู้ภายนอก (เมตร)</td>
             <td> กว้าง <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_outerWidth }}' name="partContainer_outerWidth" id=Two-oneone>
             &nbsp;&nbsp; ยาว  <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_outerLong }}' name="partContainer_outerLong" id=Two-oneone>
             &nbsp;&nbsp; สูง  <input class="textInput" type="text" style="width:100px" value='{{ $partContainer_outerHeight }}' name="partContainer_outerHeight" id=Two-oneone>

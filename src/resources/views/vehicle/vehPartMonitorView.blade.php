@@ -109,7 +109,7 @@ var PartMonitorViewTableHelper = {
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
+            <td class="formLabel" style='width:200px' >รหัสรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>

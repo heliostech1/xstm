@@ -204,17 +204,17 @@ function partFuel_getExpDateInput(tableId, rowId, val) {
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
+            <td class="formLabel" style='width:200px' >รหัสรถ</td>
+            <td style='text-align:left'><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
-            <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
+            <td class="formLabel" style='width:200px' >ทะเบียนรถ</td>
+            <td style='text-align:left'><input id=Two-oneone class="textReadOnly" readonly type="text" style="width:200px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
             
 <?php endif; ?>   
         <tr >
-            <td class="formLabel" style='width:200px' >ชนิดน้ำมันเชื้อเพลิง:</td>
+            <td class="formLabel" style='width:200px' >ชนิดน้ำมันเชื้อเพลิง</td>
             <td style='text-align:left'> {!! SiteHelper::dropdown("partFuel_oilType", $fuelOilOpt, $partFuel_oilType, "  class='textInput' style='width:400px; ' id=Two-oneoneFuel ") !!} </td> 
         </tr> 
         <tr>
@@ -223,22 +223,22 @@ function partFuel_getExpDateInput(tableId, rowId, val) {
             </td>
         </tr>   
         <tr>
-            <td class="formLabel">ชนิดแก๊สเชื้อเพลิง:</td>
+            <td class="formLabel">ชนิดแก๊สเชื้อเพลิง</td>
             <td style='text-align:left'> {!! SiteHelper::dropdown("partFuel_gasType", $fuelGasOpt, $partFuel_gasType, "  class='textInput' style='width:400px' id=Two-oneoneFuel  ") !!} </td> 
         </tr>   
         <tr>
-            <td class="formLabel">จำนวนถังแก๊ส:</td>
+            <td class="formLabel">จำนวนถังแก๊ส</td>
             <td style='text-align:left'><input id=Two-oneoneFuel class="textInput" type="text" style="width:400px" value='{{ $partFuel_gasCount }}' name="partFuel_gasCount">
             </td>
         </tr>          
         <tr>
-            <td class="formLabel">ปริมาตรความจุถังแก๊สรวม:</td>
+            <td class="formLabel">ปริมาตรความจุถังแก๊สรวม</td>
             <td style='text-align:left'><input id=Two-oneoneFuel class="textInput" type="text" style="width:400px" value='{{ $partFuel_gasTotalSize }}' name="partFuel_gasTotalSize">
             </td>
         </tr>     
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลถังแก๊ส:</td>
+            <td class="formLabel" style="padding-top: 10px">ข้อมูลถังแก๊ส</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 600px; text-align: right;' >
@@ -278,22 +278,22 @@ function partFuel_getExpDateInput(tableId, rowId, val) {
             <td></td>
         </tr>          
         <tr>
-            <td class="formLabel">ผู้รับรอง:</td>
+            <td class="formLabel">ผู้รับรอง</td>
             <td style='text-align:left'><input id=Two-oneoneFuel class="textInput" type="text" style="width:400px" value='{{ $partFuel_certBy }}' name="partFuel_certBy">
             </td>
         </tr>  
         <tr>
-            <td class="formLabel">วันที่ทำใบรับรอง:</td>
+            <td class="formLabel">วันที่ทำใบรับรอง</td>
             <td style='text-align:left'><input id=Two-oneoneFuel class="textInput" type="text" style="width:400px" value='{{ $partFuel_certDate }}' name="partFuel_certDate" id="partFuel_certDate"  autocomplete="off" >
             </td>
         </tr> 
         <tr>
-            <td class="formLabel">วันหมดอายุ:</td>
+            <td class="formLabel">วันหมดอายุ</td>
             <td style='text-align:left'><input id=Two-oneoneFuel class="textInput" type="text" style="width:400px" value='{{ $partFuel_certExpDate }}' name="partFuel_certExpDate" id="partFuel_certExpDate"  autocomplete="off" >
             </td>
         </tr>     
         <tr>
-            <td class="formLabel">ภาพข้อมูลใบรับรอง:</td>
+            <td class="formLabel">ภาพข้อมูลใบรับรอง</td>
             <td><div id='partFuel_fileContainer' style='padding:0px'></div></td>            
         </tr>         
     </tbody>
