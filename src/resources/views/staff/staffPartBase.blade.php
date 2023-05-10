@@ -203,33 +203,32 @@ function partBase_getAddressInput(tableId, rowId, val) {
 
 
         <tr>
-            <td class="formLabel" style='width:200px'  >รหัสพนักงาน:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $staffCode }}' name="staffCode" autocomplete="off">
+            <td class="formLabel" style='text-align:right;'  >รหัสพนักงาน</td>
+            <td><input class="textInput" type="text" style="width:400px; border: 1px solid #3C4C59;" value='{{ $staffCode }}' name="staffCode" autocomplete="off">
         </tr>               
         <tr>
-            <td class="formLabel">ชื่อ นามสกุล:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $staffName }}' name="staffName"></td>
+            <td class="formLabel " style='text-align:right;'>ชื่อ นามสกุล</td>
+            <td><input class="textInput" type="text" style="width:400px; border: 1px solid #3C4C59;" value='{{ $staffName }}' name="staffName"></td>
         </tr>      
         <tr>
-            <td class="formLabel">ที่อยู่:</td>
-            <td><textarea class="textAreaInput" type="text" style="width:400px"  name="partBase_address">{{ $partBase_address }}</textarea></td>
+            <td class="formLabel" style='text-align:right;'>ที่อยู่</td>
+            <td><textarea class="textAreaInput" type="text" style="width:400px; border: 1px solid #3C4C59;"  name="partBase_address">{{ $partBase_address }}</textarea></td>
         </tr>    
         <tr>
-            <td class="formLabel">เบอร์โทร:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $partBase_phone }}' name="partBase_phone"></td>
+            <td class="formLabel" style='text-align:right;'>เบอร์โทร</td>
+            <td><input class="textInput" type="text" style="width:400px; border: 1px solid #3C4C59;" value='{{ $partBase_phone }}' name="partBase_phone"></td>
         </tr>           
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลผู้ติดต่อฉุกเฉิน:</td>
+            <td class="formLabel" style='text-align:right;'>ข้อมูลผู้ติดต่อฉุกเฉิน</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
-                      <div style='float: left; width: 900px; text-align: right;' >
+                      <div style='  text-align: right;' >
                          <a id="partBase_relateTableAddLink" href="javascript:void(0);" >เพิ่มข้อมูล</a> 
                       </div>
-                      <div style='clear: both'></div>
                  </div>
 
                  <div class='customTableStyle' > 
-                 <table id='partBase_relateTable' cellspacing='0' cellpadding='0' class='tableInnerDisplay' style='width:900px' >
+                 <table id='partBase_relateTable' cellspacing='0' cellpadding='0' class='tableInnerDisplay' style='' >
                      <thead>
                      <tr class='nodrop' >
                          <th  width='20' >&nbsp;</th>
@@ -250,12 +249,12 @@ function partBase_getAddressInput(tableId, rowId, val) {
              </td> 
         </tr>   
         <tr>
-            <td class="formLabel">สังกัด:</td>
-            <td> {!! SiteHelper::dropdown("partBase_workCompany", $workCompanyOpt, $partBase_workCompany, "  id='partBase_workCompany'  class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel" style='text-align:right;'>สังกัด</td>
+            <td> {!! SiteHelper::dropdown("partBase_workCompany", $workCompanyOpt, $partBase_workCompany, "  id='partBase_workCompany'  class='textInput' style='width:400px;'  ") !!} </td> 
         </tr>           
         <tr>
-            <td class="formLabel">ชนิดพนักงาน:</td>
-            <td> {!! SiteHelper::dropdown("partBase_staffType", $staffTypeOpt, $partBase_staffType, "  id='partBase_staffType'  class='textInput' style='width:400px'  ") !!} </td> 
+            <td class="formLabel" style='text-align:right;'>ชนิดพนักงาน</td>
+            <td> {!! SiteHelper::dropdown("partBase_staffType", $staffTypeOpt, $partBase_staffType, "  id='partBase_staffType'  class='textInput' style='width:400px;'   ") !!} </td> 
         </tr>           
         <!--
         <tr>
@@ -264,7 +263,7 @@ function partBase_getAddressInput(tableId, rowId, val) {
         </tr>   
         -->
         <tr>
-            <td class="formLabel">รูปถ่ายพนักงาน:</td>
+            <td class="formLabel" style='text-align:right;'>รูปถ่ายพนักงาน</td>
             <td><div id='partBase_fileContainer' style='padding:0px'></div></td>            
         </tr>  
        

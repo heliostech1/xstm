@@ -109,20 +109,20 @@ var PartMonitorViewTableHelper = {
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >รหัสรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >ทะเบียนรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
         <tr>
-            <td class="formLabel" style='width:200px' >เลขไมล์:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >เลขไมล์</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $odometer }}'  autocomplete="off">
         </tr>  
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง:</td>
+            <td class="formLabel"  style='width:200px; text-align:right;' >แผนซ่อมบำรุง</td>
             <td> {!! SiteHelper::dropdown("partMonitorView_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='partMonitorView_monitorPlan' class='textInput' style='width:400px'  ") !!} </td> 
         </tr> 
   

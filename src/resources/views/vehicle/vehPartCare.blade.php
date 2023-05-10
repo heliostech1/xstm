@@ -192,27 +192,27 @@ var PartCareWorkerTableHelper = new PartCareBaseDriverTableHelper();
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >รหัสรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >ทะเบียนรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
             
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >ชื่อผู้ให้บริการ:</td>
+            <td class="formLabel"  style='width:200px; text-align:right;'>ชื่อผู้ให้บริการ</td>
             <td> {!! SiteHelper::dropdown("partCare_vehicleCare", $vehicleCareOpt, $partCare_vehicleCare, "  class='textInput' style='width:400px'  ") !!} </td> 
         </tr> 
         <tr>
-            <td class="formLabel">ชนิดของรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;'>ชนิดของรถ</td>
             <td> {!! SiteHelper::dropdown("partCare_vCareType", $vCareTypeOpt, $partCare_vCareType, "  class='textInput' style='width:400px'  ") !!} </td> 
         </tr> 
         
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ผู้ชับขี่ประจำรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;'>ผู้ขับขี่ประจำรถ</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 800px; text-align: right;' >
@@ -241,7 +241,7 @@ var PartCareWorkerTableHelper = new PartCareBaseDriverTableHelper();
         </tr>  
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">แรงงานประจำรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;'>แรงงานประจำรถ</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 800px; text-align: right;' >

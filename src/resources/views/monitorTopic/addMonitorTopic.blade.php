@@ -40,7 +40,7 @@ $(document).ready(function() {
 @section('content')
 
 
-<div id="pageTitle"><?php echo $sitePageName?></div>
+<div id="pageTitle"><h1><?php echo $sitePageName?></h1></div>
 <div id="pageInstructions"><?php echo $sitePageDesc?></div>
 <hr class="titleSectionSep">
 
@@ -64,13 +64,13 @@ $(document).ready(function() {
 
          
         <tr>
-            <td class="formLabel" style='width:150px'>ชื่อ:</td>
-            <td><input class="textInput" type="text" style="width:400px" value='{{ $name }}' name="name"></td>
+            <td class="formLabel">ชื่อ:</td>
+            <td><input class="textInput" type="text" style="border: 0.5px solid rgba(60, 76, 89, 1);" value='{{ $name }}' name="name"></td>
         </tr>  
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
         <tr>
             <td class="formLabel">สถานะ:</td>
-            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' style='width:400px' ") !!}
+            <td>{!! SiteHelper::dropdown('active', $activeOpt, $active, "class='textInput' style='border: 0.5px solid rgba(60, 76, 89, 1);' ") !!}
             </td>
         </tr>
             
@@ -91,15 +91,15 @@ $(document).ready(function() {
 <div class='footerBtnCont'>
 
     <?php if ($pageMode == 'add'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
     
     <?php elseif ($pageMode == 'edit'): ?>
-    <div class='footerBtnLeft'><input type="button" class='formButton' value="ตกลง" id="saveBtn" /></div>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
+    <div class='footerBtnLeft'><input type="button" class='blackBtn' value="ตกลง" id="saveBtn" /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='ยกเลิก' /></div>
    
     <?php elseif ($pageMode == 'view'): ?>
-    <div class='footerBtnLeft'><input type='button' class='formButton' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
+    <div class='footerBtnLeft'><input type='button' class='blackBtn' onClick="window.location.href='./index?keep=1';" value='กลับ' /></div>
 
     <?php endif; ?>
        
