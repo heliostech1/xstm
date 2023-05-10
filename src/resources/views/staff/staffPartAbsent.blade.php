@@ -31,11 +31,11 @@
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสพนักงาน:</td>
+            <td class="formLabel" style='width:200px ; text-align:right;' >รหัสพนักงาน</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $staffCode }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ชื่อ นามสกุล:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >ชื่อ นามสกุล</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $staffName }}'  autocomplete="off">
         </tr>  
             

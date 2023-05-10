@@ -206,23 +206,23 @@ function partMonitor_getAlertAtInput(tableId, rowId, val) {
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >รหัสรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
+            <td class="formLabel" style='width:200px; text-align:right;' >ทะเบียนรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
             
 <?php endif; ?>   
         <tr>
-            <td class="formLabel"  style='width:200px' >แผนซ่อมบำรุง:</td>
+            <td class="formLabel"  style='width:200px; text-align:right;' >แผนซ่อมบำรุง</td>
             <td> {!! SiteHelper::dropdown("partMonitor_monitorPlan", $monitorPlanOpt, $partMonitor_monitorPlan, "  id='partMonitor_monitorPlan' class='textInput' style='width:400px'  ") !!} </td> 
         </tr> 
   
         
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลซ่อมบำรุง:</td>
+            <td class="formLabel" style='width:200px; text-align:right;'>ข้อมูลซ่อมบำรุง</td>
             <td>
 
                  <div class='customTableStyle' > 

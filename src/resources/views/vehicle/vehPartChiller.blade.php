@@ -298,38 +298,38 @@ function partChiller_getOperateByInput(tableId, rowId, val) {
 <?php if ($pageMode == 'edit' || $pageMode == 'view'): ?>  
 
         <tr>
-            <td class="formLabel" style='width:200px' >รหัสรถ:</td>
+            <td class="formLabel" style='width:400px; text-align:right;' >รหัสรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px"  value='{{ $vehicleId }}'  autocomplete="off">
         </tr>        
         <tr>
-            <td class="formLabel" style='width:200px' >ทะเบียนรถ:</td>
+            <td class="formLabel" style='width:400px; text-align:right;' >ทะเบียนรถ</td>
             <td><input class="textReadOnly" readonly type="text" style="width:400px" value='{{ $licensePlate }}'  autocomplete="off">
         </tr>  
             
 <?php endif; ?>   
 
         <tr>
-            <td class="formLabel" style='width:200px' >ยี่ห้อเครื่องทำความเย็น</td>
+            <td  style='width:400px; text-align:right;' >ยี่ห้อเครื่องทำความเย็น</td>
             <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_brand }}' name="partChiller_brand">
             </td>
         </tr>           
         <tr>
-            <td class="formLabel">โมเดลเครื่องทำความเย็น</td>
+            <td class="formLabel" style='width:400px; text-align:right;'>โมเดลเครื่องทำความเย็น</td>
             <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_model }}' name="partChiller_model">
             </td>
         </tr>         
         <tr>
-            <td class="formLabel">ชนิดสารทำความเย็น:</td>
+            <td class="formLabel" style='width:400px; text-align:right;'>ชนิดสารทำความเย็น</td>
             <td> {!! SiteHelper::dropdown("partChiller_refrigerant", $refrigerantOpt, $partChiller_refrigerant, "  class='textInput' style='width:400px'  ") !!} </td> 
         </tr>   
         <tr>
-            <td class="formLabel">ช่วงอุณหภูมิทำความเย็น:</td>
+            <td class="formLabel" style='width:400px; text-align:right;'>ช่วงอุณหภูมิทำความเย็น</td>
             <td><input class="textInput" type="text" style="width:400px" value='{{ $partChiller_temperature }}' name="partChiller_temperature">
             </td>
         </tr>          
 
         <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลการสอบเทียบ <br/>เครื่องทำความเย็น:</td>
+            <td class="formLabel" style='width:400px; text-align:right;'>ข้อมูลการสอบเทียบ <br/>เครื่องทำความเย็น</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
                       <div style='float: left; width: 900px; text-align: right;' >
@@ -362,10 +362,10 @@ function partChiller_getOperateByInput(tableId, rowId, val) {
         </tr>  
         
           <tr>
-            <td class="formLabel" style="padding-top: 10px">ข้อมูลการทำ mapping <br/>เครื่องทำความเย็น:</td>
+            <td class="formLabel" style='width:400px; text-align:right;'>ข้อมูลการทำ mapping <br/>เครื่องทำความเย็น</td>
             <td>
                  <div style='padding:0px 20px 1px 0px'>
-                      <div style='float: left; width: 900px; text-align: right;' >
+                      <div style='width: 900px; text-align: right;' >
                          <a id="partChiller_mapTableAddLink" href="javascript:void(0);" >เพิ่ม</a> 
                       </div>
                       <div style='clear: both'></div>

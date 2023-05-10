@@ -556,7 +556,6 @@ TABLE.formTable TD {
  .tableInnerDisplay {
     border-collapse: initial !important;  
     position:relative; 
-    left:-10px;
     border: 1px solid black;
     margin:2px 0px !important;   
  }
@@ -567,7 +566,8 @@ TABLE.formTable TD {
     border-bottom: 1px solid black;
     font-weight: normal;
     cursor: pointer;
-    background-color:#e7e7e7;
+    background-color:#3C4C59;;
+    color: #ffffff;
 }
 
  .tableInnerDisplay tbody tr.odd {
