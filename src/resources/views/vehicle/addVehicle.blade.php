@@ -144,6 +144,34 @@ $(document).ready(function() {
         color:#3C4C59;
         border: 1px solid #3C4C59;
     }
+    .ui-draggable .ui-dialog-titlebar {
+        background: #3C4C59;
+        color: #ffffff;
+    }
+    .ui-widget,.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+        font-family: 'Noto Sans Thai', sans-serif;
+    }
+    .ui-dialog .ui-dialog-content {
+        background: #FEF5EB;
+    }
+    .ui-dialog .ui-dialog-buttonpane button {
+        margin: .5em .4em .5em 0;
+        cursor: pointer;
+        border: 1px solid rgba(60, 76, 89, 1);
+        background-color: #fff;
+        border-radius: 4px;
+        color: rgba(60, 76, 89, 1);
+    }
+    .ui-dialog .ui-dialog-buttonpane button:hover {
+        border: 1px solid rgba(60, 76, 89, 1);
+        background-color: rgba(60, 76, 89, 1);
+        border-radius: 4px;
+        color: #FFF;
+    }
+    .ui-dialog .ui-dialog-buttonpane {
+        background: #FEF5EB;
+        margin: 0px;
+    }
 </style>
 @endsection
 
